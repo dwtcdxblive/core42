@@ -1,4 +1,7 @@
-import { Link, Route, Routes, useParams } from "react-router-dom"
+import { Link, Route, Routes, useLocation, useParams } from "react-router-dom"
+import { AnimatePresence } from "framer-motion"
+import PageTransition from "./components/PageTransition.jsx"
+
 import C42Home from "./projects/core42/c42home.jsx"
 import C42Info from "./projects/core42/c42info.jsx"
 import C42Products from "./projects/core42/C42Products.jsx"
@@ -11,6 +14,8 @@ import C42DeliveryServices from "./projects/core42/C42DeliveryServices.jsx"
 import C42Brand from "./projects/core42/C42Brand.jsx"
 import C42Partners from "./projects/core42/C42Partners.jsx"
 import C42Contact from "./projects/core42/C42Contact.jsx"
+import TDRA from "./projects/TDRA/TDRA.jsx"
+
 import "./App.scss"
 
 const projects = [
@@ -21,6 +26,14 @@ const projects = [
     description:
       "Core 42 consolidates the foundational services, governance, and tooling that power every other initiative.",
     path: "/projects/core42",
+  },
+  {
+    id: "tdra",
+    name: "TDRA",
+    summary: "TDRA transformation dashboards and services.",
+    description:
+      "TDRA centralizes digital service adoption metrics, impacts, and insights across entities.",
+    path: "/projects/tdra",
   },
   {
     id: "m42",
@@ -109,29 +122,29 @@ const ProjectDetails = () => {
 }
 
 function App() {
+  const location = useLocation()
+
   return (
-    <Routes>
-      <Route path="/" element={<ProjectOverview />} />
-      <Route path="/projects/core42" element={<C42Home />} />
-      <Route path="/projects/core42/info" element={<C42Info />} />
-      <Route path="/projects/core42/products" element={<C42Products />} />
-      <Route path="/projects/core42/products/compass" element={<C42Compass />} />
-      <Route path="/projects/core42/products/ai-cloud" element={<C42AiCloud />} />
-      <Route path="/projects/core42/products/sovereign-cloud" element={<C42SovereignCloud />} />
-      <Route path="/projects/core42/products/signature-cloud" element={<C42SignatureCloud />} />
-      <Route path="/projects/core42/products/oracle-fusion" element={<C42OracleFusion />} />
-      <Route path="/projects/core42/products/delivery-services" element={<C42DeliveryServices />} />
-      <Route path="/projects/core42/brand" element={<C42Brand />} />
-      <Route path="/projects/core42/partners" element={<C42Partners />} />
-      <Route path="/projects/core42/contact" element={<C42Contact />} />
-      <Route path="/projects/:projectId" element={<ProjectDetails />} />
-    </Routes>
+    <AnimatePresence mode="wait">
+      <Routes location={location} key={location.pathname}>
+        <Route path="/" element={<PageTransition><ProjectOverview /></PageTransition>} />
+        <Route path="/projects/core42" element={<PageTransition><C42Home /></PageTransition>} />
+        <Route path="/projects/core42/info" element={<PageTransition><C42Info /></PageTransition>} />
+        <Route path="/projects/core42/products" element={<PageTransition><C42Products /></PageTransition>} />
+        <Route path="/projects/core42/products/compass" element={<PageTransition><C42Compass /></PageTransition>} />
+        <Route path="/projects/core42/products/ai-cloud" element={<PageTransition><C42AiCloud /></PageTransition>} />
+        <Route path="/projects/core42/products/sovereign-cloud" element={<PageTransition><C42SovereignCloud /></PageTransition>} />
+        <Route path="/projects/core42/products/signature-cloud" element={<PageTransition><C42SignatureCloud /></PageTransition>} />
+        <Route path="/projects/core42/products/oracle-fusion" element={<PageTransition><C42OracleFusion /></PageTransition>} />
+        <Route path="/projects/core42/products/delivery-services" element={<PageTransition><C42DeliveryServices /></PageTransition>} />
+        <Route path="/projects/core42/brand" element={<PageTransition><C42Brand /></PageTransition>} />
+        <Route path="/projects/core42/partners" element={<PageTransition><C42Partners /></PageTransition>} />
+        <Route path="/projects/core42/contact" element={<PageTransition><C42Contact /></PageTransition>} />
+        <Route path="/projects/tdra/*" element={<PageTransition><TDRA /></PageTransition>} />
+        <Route path="/projects/:projectId" element={<PageTransition><ProjectDetails /></PageTransition>} />
+      </Routes>
+    </AnimatePresence>
   )
 }
 
 export default App
-
-
-
-
-
