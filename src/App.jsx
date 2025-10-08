@@ -15,6 +15,7 @@ import C42Brand from "./projects/core42/C42Brand.jsx"
 import C42Partners from "./projects/core42/C42Partners.jsx"
 import C42Contact from "./projects/core42/C42Contact.jsx"
 import TDRA from "./projects/TDRA/TDRA.jsx"
+import G42 from "./projects/G42/G42.jsx"
 
 import "./App.scss"
 
@@ -34,6 +35,14 @@ const projects = [
     description:
       "TDRA centralizes digital service adoption metrics, impacts, and insights across entities.",
     path: "/projects/tdra",
+  },
+  {
+    id: "g42",
+    name: "G42",
+    summary: "Immersive Intelligence Grid live showcase.",
+    description:
+      "G42 streams the Intelligence Grid experience with a direct portal into the live platform.",
+    path: "/projects/g42",
   },
   {
     id: "m42",
@@ -140,6 +149,7 @@ function App() {
         <Route path="/projects/core42/brand" element={<PageTransition><C42Brand /></PageTransition>} />
         <Route path="/projects/core42/partners" element={<PageTransition><C42Partners /></PageTransition>} />
         <Route path="/projects/core42/contact" element={<PageTransition><C42Contact /></PageTransition>} />
+        <Route path="/projects/g42" element={<PageTransition><G42 /></PageTransition>} />
         <Route path="/projects/tdra/*" element={<PageTransition><TDRA /></PageTransition>} />
         <Route path="/projects/:projectId" element={<PageTransition><ProjectDetails /></PageTransition>} />
       </Routes>
@@ -148,3 +158,9 @@ function App() {
 }
 
 export default App
+
+
+
+
+
+

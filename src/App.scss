@@ -1608,3 +1608,111 @@ position: relative;
     font-size: 0.85rem;
   }
 }
+.g42-page {
+  position: relative;
+  min-height: 100vh;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.g42-page--overlay {
+  overflow: hidden;
+}
+
+.g42-video-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.g42-video {
+  width: 100%;
+  height: 100%;
+  border: none;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.g42-launch-btn {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  padding: 0.85rem 1.75rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.g42-launch-btn:hover,
+.g42-launch-btn:focus {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.6);
+  outline: none;
+}
+
+.g42-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.g42-overlay-frame {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.g42-close-btn {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  padding: 0.65rem 1.25rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: rgba(0, 0, 0, 0.65);
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.g42-close-btn:hover,
+.g42-close-btn:focus {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.6);
+  outline: none;
+}
+
+@media (max-width: 768px) {
+  .g42-launch-btn {
+    left: 50%;
+    right: auto;
+    bottom: 1.5rem;
+    transform: translateX(-50%);
+    width: calc(100% - 3rem);
+  }
+
+  .g42-close-btn {
+    top: 1rem;
+    right: 1rem;
+  }
+}
