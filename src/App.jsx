@@ -16,6 +16,7 @@ import C42Partners from "./projects/core42/C42Partners.jsx"
 import C42Contact from "./projects/core42/C42Contact.jsx"
 import TDRA from "./projects/TDRA/TDRA.jsx"
 import G42 from "./projects/G42/G42.jsx"
+import DDA from "./projects/dda/DDA.jsx"
 
 import "./App.scss"
 
@@ -57,6 +58,7 @@ const projects = [
     summary: "Digital Defense Architecture initiatives and pilots.",
     description:
       "DDA experiments with digital defense strategies and pilots future-ready capabilities.",
+    path: "/projects/dda",
   },
 ]
 
@@ -150,6 +152,7 @@ function App() {
         <Route path="/projects/core42/partners" element={<PageTransition><C42Partners /></PageTransition>} />
         <Route path="/projects/core42/contact" element={<PageTransition><C42Contact /></PageTransition>} />
         <Route path="/projects/g42" element={<PageTransition><G42 /></PageTransition>} />
+        <Route path="/projects/dda/*" element={<PageTransition><DDA /></PageTransition>} />
         <Route path="/projects/tdra/*" element={<PageTransition><TDRA /></PageTransition>} />
         <Route path="/projects/:projectId" element={<PageTransition><ProjectDetails /></PageTransition>} />
       </Routes>
@@ -158,6 +161,10 @@ function App() {
 }
 
 export default App
+
+
+
+
 
 
 

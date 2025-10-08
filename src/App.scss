@@ -1716,3 +1716,164 @@ position: relative;
     right: 1rem;
   }
 }
+
+.dda-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 1.5rem;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: #f8fafc;
+}
+
+.dda-card {
+  width: 100%;
+  max-width: 760px;
+  background: rgba(15, 23, 42, 0.86);
+  border-radius: 24px;
+  padding: 3rem;
+  box-shadow: 0 28px 80px rgba(15, 23, 42, 0.4);
+  backdrop-filter: blur(12px);
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.dda-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.dda-header h1 {
+  font-size: clamp(2rem, 2.5vw, 2.8rem);
+  margin: 0;
+}
+
+.dda-kicker {
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  color: rgba(148, 163, 184, 0.9);
+}
+
+.dda-subtext {
+  color: rgba(226, 232, 240, 0.85);
+  margin: 0;
+  line-height: 1.6;
+}
+
+.dda-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.dda-primary-btn,
+.dda-secondary-btn,
+.dda-link-btn {
+  border-radius: 999px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.dda-primary-btn,
+.dda-secondary-btn {
+  padding: 0.85rem 1.75rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.dda-primary-btn {
+  background: #38bdf8;
+  color: #0f172a;
+  box-shadow: 0 12px 30px rgba(56, 189, 248, 0.35);
+}
+
+.dda-secondary-btn {
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  color: #e2e8f0;
+  background: transparent;
+}
+
+.dda-primary-btn:hover,
+.dda-primary-btn:focus,
+.dda-secondary-btn:hover,
+.dda-secondary-btn:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 35px rgba(56, 189, 248, 0.4);
+}
+
+.dda-secondary-btn:hover,
+.dda-secondary-btn:focus {
+  background: rgba(148, 163, 184, 0.15);
+  box-shadow: none;
+}
+
+.dda-link-grid {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.dda-link-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1.25rem 1.5rem;
+  background: rgba(30, 41, 59, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.15);
+  color: #f8fafc;
+}
+
+.dda-link-btn:hover,
+.dda-link-btn:focus {
+  background: rgba(56, 189, 248, 0.18);
+  border-color: rgba(56, 189, 248, 0.45);
+  transform: translateY(-2px);
+}
+
+.dda-link-name {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.dda-link-description {
+  font-size: 0.9rem;
+  color: rgba(226, 232, 240, 0.75);
+}
+
+.dda-link-meta {
+  margin-top: 0.75rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  color: rgba(148, 163, 184, 0.9);
+}
+
+.dda-footer {
+  font-size: 0.85rem;
+  color: rgba(226, 232, 240, 0.7);
+  line-height: 1.5;
+}
+
+@media (max-width: 640px) {
+  .dda-card {
+    padding: 2.25rem 1.75rem;
+    border-radius: 18px;
+  }
+
+  .dda-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .dda-primary-btn,
+  .dda-secondary-btn {
+    width: 100%;
+  }
+}
