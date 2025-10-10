@@ -17,7 +17,7 @@ import C42Contact from "./projects/core42/C42Contact.jsx"
 import TDRA from "./projects/TDRA/TDRA.jsx"
 import G42 from "./projects/G42/G42.jsx"
 import DDA from "./projects/dda/DDA.jsx"
-
+import InvestDubai from "./projects/TDRA/pages/InvestDubai.jsx"
 import "./App.scss"
 
 const projects = [
@@ -154,6 +154,9 @@ function App() {
         <Route path="/projects/g42" element={<PageTransition><G42 /></PageTransition>} />
         <Route path="/projects/dda/*" element={<PageTransition><DDA /></PageTransition>} />
         <Route path="/projects/tdra/*" element={<PageTransition><TDRA /></PageTransition>} />
+        <Route path="/projects/tdra/InvestDubai" element={<PageTransition><InvestDubai /></PageTransition>} />
+
+        
         <Route path="/projects/:projectId" element={<PageTransition><ProjectDetails /></PageTransition>} />
       </Routes>
     </AnimatePresence>

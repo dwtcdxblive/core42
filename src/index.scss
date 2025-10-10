@@ -24,3 +24,27 @@ body {
 #root {
   min-height: 100vh;
 }
+ @font-face {
+  font-family: 'GE_SS_Two_Bold';
+  src: url('/assets/fonts/GE_SS_Two_Bold.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+ @font-face {
+  font-family: 'GE_SS_Two_Medium';
+  src: url('/assets/fonts/GE_SS_Two_Medium.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+ @font-face {
+  font-family: 'GothamBold';
+  src: url('/assets/fonts/GothamBold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+ @font-face {
+  font-family: 'GothamMedium';
+  src: url('/assets/fonts/GothamMedium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
