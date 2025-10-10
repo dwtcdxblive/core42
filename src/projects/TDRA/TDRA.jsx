@@ -56,7 +56,7 @@ export default function TDRA() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const { data } = await axios.get('http://localhost:5002/api/entities');
+        const { data } = await axios.get('https://events.dxblive.com/data/api/entities');
 
         const processedItems = (data || []).map((entity) => {
           const adoptedServices = [];

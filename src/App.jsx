@@ -51,6 +51,7 @@ const projects = [
     summary: "Mission 42: next-generation operational intelligence.",
     description:
       "M42 focuses on intelligence workflows, analytics, and automation to accelerate mission success.",
+      path: "https://marwaalnaqar.github.io/G42/"
   },
   {
     id: "dda",

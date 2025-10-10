@@ -16,6 +16,21 @@ const DDALanding = () => {
           <Link className="dda-primary-btn" to="linking">
             Open Linking Test Page
           </Link>
+          <Link className="dda-secondary-btn" to="smartemployee">
+            View SmartEmployee Journey
+          </Link>
+          <Link className="dda-secondary-btn" to="agents-suite">
+            Explore Agents Suite
+          </Link>
+          <Link className="dda-secondary-btn" to="trade">
+            View Trade Showcase
+          </Link>
+           <Link className="dda-secondary-btn" to="build">
+            View build Showcase
+          </Link>
+             <Link className="dda-secondary-btn" to="justice">
+            View justice Showcase
+          </Link>
           <a className="dda-secondary-btn" href="https://prod.shail.ae/wv/linking/" target="_blank" rel="noreferrer">
             View Production Reference
           </a>

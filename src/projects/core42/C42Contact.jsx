@@ -12,7 +12,6 @@ const productOptions = [
   { value: "ai-cloud", label: "AI Cloud" },
   { value: "sovereign", label: "Sovereign Public Cloud" },
   { value: "signature", label: "Signature Private Cloud" },
-  { value: "oracle-fusion", label: "Oracle Fusion" },
   { value: "delivery-services", label: "Delivery Services" },
   { value: "other", label: "Other" },
 ]
