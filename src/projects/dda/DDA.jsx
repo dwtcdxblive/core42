@@ -6,6 +6,8 @@ import SmartEmplyee from "./SmartEmplyee.jsx"
 import AgentsSuite from "./AgentsSuite.jsx"
 import BuildInDubai from "./DDABuild.jsx"
 import JusticeInDubai from "./DDAJustice.jsx"
+import DubaiNow from "./DubaiNow.jsx"
+import DubaiNowDetail from "./DubaiNowDetail.jsx"
 
 const DDA = () => {
   return (
@@ -17,8 +19,11 @@ const DDA = () => {
       <Route path="agents-suite" element={<AgentsSuite />} />
       <Route path="build" element={<BuildInDubai/>}/>
       <Route path="justice" element={<JusticeInDubai/>}/>
+      <Route path="dubai-now" element={<DubaiNow />} />
+      <Route path="dubai-now/:slug" element={<DubaiNowDetail />} />
     </Routes>
   )
 }
 
 export default DDA
+

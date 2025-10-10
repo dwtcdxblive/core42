@@ -34,6 +34,10 @@ const DDALanding = () => {
           <a className="dda-secondary-btn" href="https://prod.shail.ae/wv/linking/" target="_blank" rel="noreferrer">
             View Production Reference
           </a>
+       <Link className="dda-secondary-btn" to="dubai-now">
+            View Dubai Now
+          </Link>
+          
         </div>
       </section>
     </main>
