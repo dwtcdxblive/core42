@@ -62,12 +62,12 @@ const sectionTitleAr= "وصف المشروع / المنتج";
           </ul>
            </div>
            {/* CTA */}
-        <div className="se__cta  position-absolute  start-50 translate-middle-x" style={{bottom:'10px'}}>
-          <button type="button" className="se__btn ">
-            <span className="se__btn-ar font-dda_ar ">جرّب الآن</span>
-            <span className="se__btn-en ">EXPLORE</span>
-          </button>
-        </div>
+            <div className="se__cta  position-absolute  start-50 translate-middle-x" style={{bottom:'10px'}}>
+              <button type="button" className="se__btn ">
+                <span className="se__btn-ar font-dda_ar ">جرّب الآن</span>
+                <span className="se__btn-en ">EXPLORE</span>
+              </button>
+            </div>
         </div>
 
        
