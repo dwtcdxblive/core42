@@ -17,6 +17,10 @@ import SourcingAgent from "./SourcingAgent.jsx"
 import ProductCopilot from "./ProductCopilot.jsx"
 import Recruitment from "./Recruitment.jsx"
 import DubaiTransport from "./DubaiTransport.jsx"
+import InvestDubai from "./InvestDubai.jsx"
+import TourismDubai from "./TourismDubai.jsx"
+import JusticeDubai from "./JusticeDubai.jsx"
+import BuildDubai from "./buildDubai.jsx"
 const DDA = () => {
   return (
     <Routes>
@@ -27,7 +31,15 @@ const DDA = () => {
       <Route path="sourcinagent" element={<SourcingAgent />} />
       <Route path="productcopilot" element={<ProductCopilot />} />
       <Route path="recruitment" element={<Recruitment />} />
+      <Route path="investDubai" element={<InvestDubai />} />
+      <Route path="tourismDubai" element={<TourismDubai />} />
+      <Route path="justiceDubai" element={<JusticeDubai />} />
+      <Route path="buildDubai" element={<BuildDubai />} />
 
+
+
+
+    
 
 
       <Route path="agents-suite" element={<AgentsSuite />} />
@@ -43,6 +55,7 @@ const DDA = () => {
 
       <Route path="dubai-now/:slug" element={<DubaiNowDetail />} />
       
+  
     </Routes>
   )
 }
