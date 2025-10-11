@@ -2479,7 +2479,7 @@ position: relative;
   display: grid;
   place-items: center;
   padding: 0px;
-  background: #f5f7fb;
+background-color: transparent;
 
   &__card {
     // width: min(510px, 92vw);
@@ -2603,11 +2603,11 @@ text-align: center;
 
     &--ar {
       direction: rtl;
-      padding-right: 1.5rem;
+      padding-right: 0.5rem;
     }
       &--en {
   
-      padding-left: 1.5rem;
+      padding-left: 0.5rem;
     }
   }
 
@@ -2668,7 +2668,7 @@ text-align: center;
     align-items: center;
 
     /* optional: guarantees a minimum row height so mixed wrapping still looks tidy */
-    min-height: 48px;
+    min-height: 33px;
 
     strong {
       font-weight: 700;
@@ -3525,7 +3525,7 @@ text-align: center;
   display: flex;
   justify-content: center;         /* center horizontally */
   align-items: center;             /* center vertically */
-  background: #f5f7fb;
+  background-color: transparent;
   padding: 40px 0;
 &__card_container{
     
@@ -3700,7 +3700,7 @@ text-align: center;
       font-size: 16px;
       line-height: 1.45;
       color: var(--text);
-      min-height: 48px;
+      min-height: 38px;
 
       &::before {
         content: "-";
@@ -3797,7 +3797,7 @@ text-align: center;
   gap: 12px;
 }
 
-.dn__logo {
+.dn__logo ,.dn__update__logo {
   height: clamp(36px, 6vw, 48px);
   object-fit: contain;
 }
@@ -3929,7 +3929,7 @@ text-align: center;
 }
 
 /* Logos */
-.dn__logos ,.dn__logo {
+.dn__logos ,.dn__logo ,.dn__update__logo {
   margin-top: clamp(16px, 3vw, 24px);
   display: grid;
   place-items: center;
@@ -3951,6 +3951,12 @@ text-align: center;
     object-fit: contain;
 }
 
+.dn__update__logo img {
+    width: 100%;
+    max-width: 160px;
+    height: auto;
+    object-fit: contain;
+}
 /* -------- Mobile tight fit (keeps two columns + divider visible) -------- */
 @media (max-width: 480px) {
   .dn__card {
@@ -4027,7 +4033,7 @@ text-align: center;
   }
 
   .dn__logos {
-    margin-top: 12px;
+    margin-top: 0px;
   }
 }
 
@@ -4315,4 +4321,22 @@ text-align: center;
   background-repeat: repeat;
   background-size: cover;
  /* background: linear-gradient(360deg, rgba(14, 33, 44, 0) 0%, rgba(14, 33, 44, 0.95) 79.33%, #0E212C 100%); */
+}
+.fs-09{
+font-size: 0.9rem !important;
+}
+.fs-08{
+font-size: 0.8rem !important;
+}
+.h-20vh{
+  height: 20vh !important;
+}
+.h-30vh{
+  height: 30vh !important;
+}
+.h-10vh{
+  height: 10vh !important;
+}
+.h-15vh{
+  height: 15vh !important;
 }
