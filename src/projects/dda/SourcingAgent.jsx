@@ -1,34 +1,27 @@
-import Logo from "../../assets/smartemployee.png"; // adjust path if needed
+
 import { memo } from "react";
 
-
-const SmartEmplyee = memo(function SmartEmplyee() {
-
-
-const activitiesEn= [
-  { strong: "Information Inquiries", normal: "Instant answers" },
-  { strong: "Apply for Services", normal: "Submit requests fast" },
-  { strong: "Laws & Policies", normal: "Quick access to guidelines" },
-  { strong: "Expense Bill Analysis", normal: "Validate claims" },
-  { strong: "Receipt Matching", normal: "Automated reconciliation" },
-  { strong: "Financial Reconciliation", normal: "Ensure accuracy" },
-  { strong: "Workforce Scheduler Generator", normal: "Optimized schedules" },
-];
-
- const activitiesAr= [ 
-  { strong: "استفسارات المعلوماتية", normal: " - إجابات فورية" },
-  { strong: "التقديم على الخدمات", normal: " - إرسال الطلبات بسرعة" },
-  { strong: "القوانين والسياسات", normal: " - وصول سريع إلى الإرشادات" },
-  { strong: "تحليل فواتير المصروفات", normal: " - التحقق من المطالبات" },
-  { strong: "مطابقة الإيصالات", normal: " - تسوية آلية" },
-  { strong: "التسوية المالية", normal: " - ضمان الدقة المالية" },
-  { strong: "منشئ جداول القوى العاملة", normal: " - جداول عمل محسّنة" },
-];
+const SourcingAgent = memo(function SourcingAgent() {
+  const activitiesEn= [
+    { strong: "Tenders", normal: "Coordinator" },
+    { strong: "Supplier", normal: "Participation" },
+    { strong: "Answer Supplier", normal: "Inquiries" },
+    { strong: "New Supplier", normal: "Registration" },
+    { strong: "Profile", normal: "Modifications" },
+  ];
+  
+  const activitiesAr= [
+    { strong: "منصة الإماراتيين", normal: " - حصرية للمواطنين" },
+    { strong: "العائلة", normal: " - التعليم والرعاية الصحية في مكان واحد" },
+    { strong: "المدفوعات", normal: " - كل الفواتير في كل مرة" },
+    { strong: "القيادة", normal: " - جميع خدمات القيادة في مكان واحد" },
+    { strong: "القيادة", normal: " - جميع خدمات القيادة في مكان واحد" },
+  ];
   const titleEn= "Sourcing Agents";
 const titleAr= "وكلاء التوريد";
 
-const sectionTitleEn= "ROLES";
-const sectionTitleAr= "المهام";
+const sectionTitleEn= "Project / Product Description";
+const sectionTitleAr= "وصف المشروع / المنتج";
   return (
     <section className="se vh-100">
       <div className="se__card   vh-100">
@@ -36,8 +29,8 @@ const sectionTitleAr= "المهام";
         <header className="se__header h-25 ">
      
           <div className="se__brand">
-               <img className="se__logo" src={Logo} alt="smarTemployee" />
-      
+            <span className="se__brand-ar font-36 font-bold ">{titleAr} </span>
+            <span className="se__brand-en font-36 font-bold">{titleEn}</span>
           </div>
         </header>
 
@@ -83,4 +76,4 @@ const sectionTitleAr= "المهام";
   );
 });
 
-export default SmartEmplyee;
+export default SourcingAgent;

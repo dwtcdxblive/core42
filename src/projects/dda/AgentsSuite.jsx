@@ -9,155 +9,137 @@ const cards = [
       "التوظيف باستخدام الذكاء الاصطناعي بكل سهولة؛ أداة توظيف متقدمة تقوم تلقائيًا بإنشاء إعلانات الوظائف، ومطابقة السير الذاتية، وتجهيز مقابلات الوظائف، وتختار المرشحين الأكثر ملاءمة لكل وظيفة.",
     descEn:
       "AI Recruitment Agent that automates CV matching, pre-screening interviews, job posting, and candidate shortlisting.",
-    activitiesEn: [
-      "Job Posting",
-      "Resume Evaluation and Matching",
-      "Interview Question Builder",
-      "Pre-Screening Interview",
-    ],
-    activitiesAr: [
-      "نشر إعلانات الوظائف",
-      "مطابقة السير الذاتية",
-      "منشئ أسئلة المقابلات",
-      "إجراء مقابلة الفرز الأولي",
-    ],
+activitiesEn: [
+  { strong: "Job ", normal: "Posting" },
+  { strong: "Resume Evaluation ", normal: "and Matching" },
+  { strong: "Interview Question ", normal: "Builder" },
+  { strong: "Pre-Screening ", normal: "Interview" },
+],
+
+activitiesAr: [
+  { strong: "  منشئ إعلانات الوظائف", normal: " - ينشئ الإعلان خلال ثوانٍ" },
+  { strong: "  مطابق السير الذاتية", normal: " - يحدد المرشحين الأنسب للوظائف" },
+  { strong: "  منشئ أسئلة المقابلات", normal: " - يُنشئ أسئلة خاصة بكل وظيفة" },
+  { strong: "  المقابلة التمهيدية", normal: " - الذكاء الاصطناعي يجري عملية الفرز الأولى" },
+],
   },
   {
     key: "sourcing",
     titleAr: "مساعد التوريد الافتراضي",
     titleEn: "SOURCING AGENT",
-    descAr:
-      "مساعد التوريد باستخدام الذكاء الاصطناعي، يعمل على تبسيط إدارة الموردين، ويدير دورة عمل المورد، والمشاركة في المناقصات، والتواصل بكفاءة.",
-    descEn:
-      "AI Sourcing Agent that manages supplier registrations, tender participation, profile updates, and responds to supplier inquiries on tenders.",
-    activitiesEn: [
-      "Tenders Coordinator",
-      "Supplier Participation",
-      "Supplier Inquiries",
-      "Supplier Registration",
-    ],
-    activitiesAr: [
-      "منسق المناقصات",
-      "مشاركة الموردين",
-      "الرد على استفسارات/أسئلة الموردين",
-      "تسجيل الموردين",
-    ],
+descAr:
+  "ذكاء اصطناعي يعمل على تبسيط إدارة الموردين، ويدير دورة عمل المورد، والمشاركة في المناقصات، والتواصل بكفاءة.",
+descEn:
+  "AI Recruitment Agent that automates CV matching, pre-screening interviews, job posting, and candidate shortlisting for managers.",
+  activitiesEn: [
+  { strong: "Tenders", normal: "Coordinator" },
+  { strong: "Supplier", normal: "Participation" },
+  { strong: "Supplier", normal: "Inquiries" },
+  { strong: "Supplier", normal: "Registration" },
+  { strong: "Profile", normal: "Update" },
+],
+
+activitiesAr: [
+  { strong: "  تنسيق المناقصات", normal: " - إدارة جميع أنشطة المناقصات" },
+  { strong: "  مشاركة الموردين", normal: " - متابعة وضمان مشاركة الموردين" },
+  { strong: "  الرد على استفسارات الموردين", normal: " - إجابات فورية على الاستفسارات" },
+  { strong: "  تسجيل الموردين الجدد", normal: " - عملية تسجيل سريعة وسهلة" },
+  { strong: "  تحديث الملف التعريفي", normal: " - تعديل المعلومات بسلاسة" },
+],
   },
   {
     key: "procurement",
     titleAr: "مساعد العقود والمشتريات الافتراضي",
     titleEn: "PROCUREMENT & CONTRACT AGENT",
-    descAr:
-      "مساعد العقود والمشتريات باستخدام الذكاء الاصطناعي؛ يدعم تقييم المناقصات وصياغة العقود ويضمن الامتثال والتحقق من الفواتير.",
-    descEn:
-      "An AI Procurement & Contract Agent that automates tender evaluations, contract generation, and invoice verification.",
-    activitiesEn: [
-      "Tender Evaluation",
-      "Contract Drafting",
-      "Contract Analyzer",
-      "Invoice Verification",
-    ],
-    activitiesAr: [
-      "تقييم المناقصات",
-      "إعداد العقود",
-      "تحليل العقود",
-      "التحقق من الفواتير",
-    ],
+descAr:
+  "وكيل ذكاء اصطناعي يدعم تقييم المناقصات وصياغة العقود ويضمن الامتثال والتحقق من الفواتير.",
+descEn:
+  "AI Sourcing Agent that supports tender evaluation, contract drafting, ensures compliance, and verifies invoices.",
+   activitiesEn: [
+  { strong: "Tender", normal: "Evaluation" },
+  { strong: "Contract", normal: "Drafting" },
+  { strong: "Contract", normal: "Analyzer" },
+  { strong: "Invoice", normal: "Verification" },
+],
+
+activitiesAr: [
+  { strong: "تقييم المناقصات", normal: " - تحليل العطاءات بسرعة وكفاءة" },
+  { strong: "إعداد العقود", normal: " - توليد مسودات العقود آلياً" },
+  { strong: "مجال العقود", normal: " - التحقق من الالتزام والمخاطر" },
+  { strong: "التحقق من الفواتير" , normal: " -  أتمتة عمليات المراجعة والدقة" },
+],
   },
 ];
 
 const AgentsSuite = memo(function AgentsSuite() {
   return (
-    <section className="py-4">
-      <div className="container">
-        <div className="row g-4 align-items-stretch">
+
+
+
+ <section className="ags py-4 w-100 d-flex justify-content-center">
+
+  <div className="row w-100 g-4 justify-content-center align-items-stretch row-cols-1 row-cols-md-2 row-cols-lg-3">
+     
           {cards.map((c) => (
-            <div key={c.key} className="col-12 col-md-6 col-lg-4">
-              {/* Card = flex column so we can space sections and pin CTA */}
-              <div className="card h-100 shadow-sm">
-                <div className="card-body d-flex flex-column">
-                  {/* Stack of 3 content blocks spaced with justify-content-between */}
-                  <div className="d-flex flex-column justify-content-between flex-grow-1 gap-3">
-                    {/* 1) Headers */}
-                    <header className="text-center">
-                      <h5 className="mb-1 fw-bold" dir="rtl">
-                        {c.titleAr}
-                      </h5>
-                      <h6 className="mb-0 text-uppercase fw-bold">
-                        {c.titleEn}
-                      </h6>
-                    </header>
-
-                    {/* 2) Descriptions */}
-                    <div className="text-center">
-                      <p className="mb-2" dir="rtl">
-                        {c.descAr}
-                      </p>
-                      <p className="mb-0">{c.descEn}</p>
-                    </div>
-
-                    {/* 3) Activities */}
-                    <div>
-                      {/* Pills */}
-                      <div className="d-flex gap-2 mb-2">
-                        <span className="badge rounded-pill text-bg-primary flex-fill text-center py-2">
-                          ACTIVITIES
-                        </span>
-                        <span
-                          className="badge rounded-pill text-bg-primary flex-fill text-center py-2"
-                          dir="rtl"
-                        >
-                          الأنشطة
-                        </span>
-                      </div>
-
-                      {/* Bordered lists box */}
-                      <div className="border rounded-3 p-3 bg-white">
-                        <div className="row g-3">
-                          {/* EN list */}
-                          <div className="col-6">
-                            <ul className="list-unstyled mb-0">
-                              {c.activitiesEn.map((item) => (
-                                <li key={item} className="mb-2 d-flex">
-                                  <span className="me-2">•</span>
-                                  <span className="fw-semibold">{item}</span>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                          {/* Divider */}
-                          <div className="col-0 d-none d-sm-block border-start" />
-                          {/* AR list */}
-                          <div className="col-6" dir="rtl">
-                            <ul className="list-unstyled mb-0 text-end">
-                              {c.activitiesAr.map((item) => (
-                                <li key={item} className="mb-2 d-flex justify-content-end">
-                                  <span className="fw-semibold">{item}</span>
-                                  <span className="ms-2">•</span>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+            <div key={c.key} className="ags__card_container col d-flex">
+              <article className="ags__card position-relative">
+                {/* header */}
+                <header className="ags__header ">
+                  <div className="ags__agent-brand">
+                    <span className="ags__brand-ar font-dda_ar">{c.titleAr}</span>
+                    <span className="ags__brand-en">{c.titleEn}</span>
                   </div>
+                </header>
 
-                  {/* CTA pinned at bottom via mt-auto on its wrapper OR by flex-grow above */}
-                  <div className="mt-3 text-center">
-                    <button type="button" className="btn btn-primary px-4 py-2 rounded-3">
-                      <div className="fw-bold" dir="rtl">
-                        جرّب الآن
-                      </div>
-                      <div className="small text-uppercase fw-bold">Explore</div>
+                {/* intro */}
+                <div className="ags__intro">
+                     <p className="ags__intro-ar">{c.descAr}</p>
+                  {/* <span className="ags__divider" aria-hidden /> */}
+             
+                    <p className="ags__intro-en">{c.descEn}</p>
+                </div>
+
+                {/* activities */}
+                <div className="ags__roles-head">
+                  <span className="ags__pill">ACTIVITIES</span>
+                  <span className="ags__pill ags__pill--ar">النشاطات</span>
+                </div>
+
+    
+                
+                  {/* Roles two-column list */}
+                  <div className=" pb-4  vh-50 position-relative ">
+                    <div className="ags__roles">
+                    <ul className="ags__list ags__list--en  pb-4">
+                        {c.activitiesEn.map((item) => <li className="fs-4" key={item}>
+                                <strong>{item.strong} </strong>
+                                
+                                {item.normal}</li>)}
+                  
+                    </ul>
+
+                    <span className="ags__divider ags__divider--roles" aria-hidden="true" />
+
+                    <ul className="ags__list se__list--ar  pb-4 font-dda_ar fs-6">
+                      {c.activitiesAr.map((item) => <li className="fs-4"  key={item}>
+                                <strong>{item.strong} </strong>
+                                
+                                {item.normal}</li>)}
+                    </ul>
+                    </div>
+                    {/* CTA */}
+                  <div className="ags__cta  position-absolute  start-50 translate-middle-x" style={{bottom:'10px'}}>
+                    <button type="button" className="ags__btn ">
+                      <span className="ags__btn-ar font-dda_ar ">جرّب الآن</span>
+                      <span className="ags__btn-en ">EXPLORE</span>
                     </button>
                   </div>
-                </div>
-              </div>
+                  </div>
+              </article>
             </div>
           ))}
-        </div>
-      </div>
+  </div>
+    
     </section>
   );
 });
