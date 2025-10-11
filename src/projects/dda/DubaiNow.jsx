@@ -13,6 +13,8 @@ const DubaiNow = memo(function DubaiNow() {
   const mid = Math.ceil(dubaiNowItems.length / 2);
   const left = dubaiNowItems.slice(0, mid);
   const right = dubaiNowItems.slice(mid);
+
+
 const card ={
   key: "transportation",
   titleAr: " المنصة الموحدة لجميع خدمات الأفراد في المدينة",
@@ -21,16 +23,19 @@ const card ={
     "تجارب المدينة الرقمية تغطي أكثر من 25 خدمة لأكثر من 20 جهات.",
   descEn:
     "DIGITAL CITY EXPERIENCES COVERING 350 SERVICES FOR MORE THAN 20 ENTITIES",
-  activitiesEn: [
-    { strong: "Plan", normal: " your journey." },
-    { strong: "Book", normal: " your mode of transportation." },
-    { strong: "Purchase and manage", normal: " your travel cards." },
-  ],
-  activitiesAr: [
-    { strong: "خطط رحلتك.", normal: "" },
-    { strong: "احجز وسيلة المواصلات الخاصة بك.", normal: "" },
-    { strong: "اشترِ وأدر بطاقات السفر الخاصة بك.", normal: "" },
-  ],
+ activitiesEn : [
+  { strong: "Payments: Every Bill, Every Time" },
+  { strong: "Driving: All Driving Services in One Place" },
+  { strong: "Residency: Complete Residency Management" },
+  { strong: "Family: Education & Health Care in One Place" },
+],
+
+ activitiesAr : [
+  { strong: "المدفوعات: سدد كل فواتيرك بسهولة وفي أي وقت" },
+  { strong: "القيادة: جميع خدمات القيادة في مكان واحد" },
+  { strong: "الإقامة: إدارة متكاملة للإقامة" },
+  { strong: "العائلة: التعليم والرعاية الصحية في مكان واحد" },
+]
 }
   return (
     <section className=" se">
@@ -44,35 +49,34 @@ const card ={
             className="se__logo"
             src={GovDubai}
             alt="Government of Dubai"
-            style={{ height: "70px", width: "auto" }}
+            style={{ height: "50px", width: "auto" }}
           />
          
         </div>
       </div>
 
       {/* Centered Titles */}
-      <div className="text-center mt-4">
-        <span className="se__brand-ar fw-medium d-block fs-4 pb-2 font-dda_ar">
-          المنصة الرقمية المتخصصة في التنقل في دبي
+      <div className="text-center mt-2">
+        <span className="se__brand-ar fw-medium d-block fs-4  font-dda_ar">
+         {card.titleAr}
         </span>
-        <span className="se__brand-en fw-bold d-block pb-2 fs-5 text-uppercase mt-1">
-          THE SPECIALIZED DIGITAL PLATFORM FOR<br />
-          TRANSPORTATION IN DUBAI.
+        <span className="se__brand-en fw-bold d-block pb-2 fs-5 text-uppercase mt-1" >
+     {card.titleEn}
         </span>
       </div>
     </header>
       {/* Roles header pills */}
         <div className="se__roles-head  py-2  ">
-          <span className="se__pill se__pill--en fw-normal  fs-6 h-auto px-2 ">{card.descEn}</span>
-          <span className="se__pill se__pill--ar fw-normal fs-6 h-auto px-2">{card.descAr}</span>
+          <span className="se__pill se__pill--en fw-normal   h-auto px-2 " style={{ fontSize: '0.8rem' }}>{card.descEn}</span>
+          <span className="se__pill se__pill--ar fw-normal  h-auto px-2" style={{ fontSize: '0.8rem' }}>{card.descAr}</span>
         </div>
-         <div className=" pb-4  position-relative " >
+         <div className=" pb-2  position-relative " >
           <div className="se__roles h-100">
           <ul className="se__list se__list--en justify-content-start
     align-content-start  pb-4">
-                    {left.map(i => (
-              <li style={{minHeight: 'unset'}} key={i.slug}>
-                <Link className="dn__link"   style={{ textDecoration: 'none', color: 'inherit' }} to={`/projects/dda/dubai-now/${i.slug}`}>{i.en}</Link>
+                    {card.activitiesEn.map(i => (
+              <li style={{minHeight: 'unset'}} key={i.slug}>{i.strong}
+                {/* <Link className="dn__link"   style={{ textDecoration: 'none', color: 'inherit' }} to={`/projects/dda/dubai-now/${i.slug}`}>{i.strong}</Link> */}
               </li>
             ))}
         
@@ -82,9 +86,9 @@ const card ={
 
           <ul className="se__list se__list--ar justify-content-start
     align-content-start  pb-4 font-dda_ar fs-6">
-             {right.map(i => (
-              <li style={{minHeight: 'unset'}} key={i.slug}>
-                <Link className="dn__link" style={{ textDecoration: 'none', color: 'inherit' }} to={`/projects/dda/dubai-now/${i.slug}`} dir="rtl">{i.ar}</Link>
+                  {card.activitiesAr.map(i => (
+              <li style={{minHeight: 'unset'}} key={i.slug}>{i.strong}
+                {/* <Link className="dn__link" style={{ textDecoration: 'none', color: 'inherit' }} to={`/projects/dda/dubai-now/${i.slug}`} dir="rtl">{i.ar}</Link> */}
               </li>
             ))}
           </ul>

@@ -21,8 +21,15 @@ import InvestDubai from "./InvestDubai.jsx"
 import TourismDubai from "./TourismDubai.jsx"
 import JusticeDubai from "./JusticeDubai.jsx"
 import BuildDubai from "./buildDubai.jsx"
+import VideoBackground from "./VideoBackground.jsx"
+
 const DDA = () => {
   return (
+<div className="position-relative min-vh-100">
+  <VideoBackground  />
+
+  {/* Foreground content ABOVE the overlay */}
+  <div className="position-relative" style={{ zIndex: 2 }}>
     <Routes>
       <Route index element={<DDALanding />} />
       <Route path="linking" element={<LinkingTest />} />
@@ -35,28 +42,20 @@ const DDA = () => {
       <Route path="tourismDubai" element={<TourismDubai />} />
       <Route path="justiceDubai" element={<JusticeDubai />} />
       <Route path="buildDubai" element={<BuildDubai />} />
-
-
-
-
-    
-
-
       <Route path="agents-suite" element={<AgentsSuite />} />
-      <Route path="build" element={<BuildInDubai/>}/>
-      <Route path="justice" element={<JusticeInDubai/>}/>
+      <Route path="build" element={<BuildInDubai />} />
+      <Route path="justice" element={<JusticeInDubai />} />
       <Route path="codai" element={<CODAI />} />
       <Route path="ai-sampling" element={<AISampling />} />
       <Route path="dubai-population" element={<DubaiPopulation />} />
       <Route path="data-statistics" element={<DataStatistics />} />
       <Route path="data-marketplace" element={<DataMarketplace />} />
       <Route path="dubai-now" element={<DubaiNow />} />
-      <Route path="dubai-transport" element={<DubaiTransport />} />
-
       <Route path="dubai-now/:slug" element={<DubaiNowDetail />} />
-      
-  
+      <Route path="dubai-transport" element={<DubaiTransport />} />
     </Routes>
+  </div>
+</div>
   )
 }
 
