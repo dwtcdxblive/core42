@@ -5,7 +5,7 @@ const VIMEO_HASH = "198932976f";
 // Player URL (not vimeo.com/...)
 const streamUrl =
   `https://player.vimeo.com/video/${VIMEO_ID}?h=${VIMEO_HASH}` +
-  "&autoplay=1&loop=1&control=0&autopause=0&playsinline=1";
+  "&autoplay=1&loop=1&autopause=0&playsinline=1";
 
 const intelligenceGridUrl = "https://intelligencegrid.g42.ai/";
 
