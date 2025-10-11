@@ -110,7 +110,7 @@ const activitiesAr = [
 
 
   return (
-    <main className="min-vh-100 d-flex align-items-start bg-light">
+    <main className="min-vh-100 d-flex align-items-start  ">
       <div className="container py-5">
         {/* logo */}
          <div className="col-12 col-md-3 text-md-start text-start mb-3 mb-md-0 my-5 ">

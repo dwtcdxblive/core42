@@ -27,7 +27,7 @@ const headSection_en = "DIGITAL CITY EXPERIENCES COVERING 700 SERVICES FOR MORE 
 const headSection_ar = "تجارب المدينة الرقمية تغطي أكثر من 700 خدمة لأكثر من 50 جهة";
 
   return (
-    <main className="min-vh-100 d-flex align-items-start bg-light">
+    <main className="min-vh-100 d-flex align-items-start  ">
       <div className="container py-5">
         {/* logo */}
          <div className="col-12 col-md-3 text-md-start text-start mb-3 mb-md-0 my-5 ">

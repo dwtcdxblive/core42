@@ -1,6 +1,6 @@
 ﻿import Explore from '../../assets/explore-btn.png';
 const VIDEO_SRC =
-  'https://player.vimeo.com/video/1126221661?h=29587f9209&badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&muted=1&loop=1';
+  'https://player.vimeo.com/video/1126221661?h=29587f9209&badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&muted=1&loop=1&controls=0';
 
 const ExperienceHero = ({
   logo,
