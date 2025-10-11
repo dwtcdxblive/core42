@@ -1,26 +1,21 @@
 import { memo } from "react";
 import { Link } from "react-router-dom";
 import GovDubai from "../../assets/dubai-gov.png";
-import LogosStrip from "../../assets/dubai-now-logos.png";
-import TradeQR from "../../assets/trade-QR.png";
-import { dubaiNowItems } from "./DubaiNowData";
 import rtaLogo from "../../assets/rtaLogo.svg";
 import transportQr from "../../assets/transportQr.png";
+import { dubaiNowItems } from "./DubaiNowData";
 
-
-const DubaiNow = memo(function DubaiNow() {
+const DubaiTransport = memo(function DubaiTransport() {
   // split EN/AR columns evenly
-  const mid = Math.ceil(dubaiNowItems.length / 2);
-  const left = dubaiNowItems.slice(0, mid);
-  const right = dubaiNowItems.slice(mid);
+
 const card ={
   key: "transportation",
-  titleAr: " المنصة الموحدة لجميع خدمات الأفراد في المدينة",
-  titleEn: "THE UNIFIED PLATFORM FOR ALL INDIVIDUAL SERVICES IN THE CITY.",
+  titleAr: "المنصة الرقمية المتخصصة في التنقل في دبي",
+  titleEn: "THE SPECIALIZED DIGITAL PLATFORM FOR TRANSPORTATION IN DUBAI",
   descAr:
-    "تجارب المدينة الرقمية تغطي أكثر من 25 خدمة لأكثر من 20 جهات.",
+    "تجارب المدينة الرقمية تغطي أكثر من 25 خدمة لأكثر من 5 جهات.",
   descEn:
-    "DIGITAL CITY EXPERIENCES COVERING 350 SERVICES FOR MORE THAN 20 ENTITIES",
+    "Digital city experiences covering more than 25 services for more than 5 entities.",
   activitiesEn: [
     { strong: "Plan", normal: " your journey." },
     { strong: "Book", normal: " your mode of transportation." },
@@ -35,7 +30,19 @@ const card ={
   return (
     <section className=" se">
       <div className="dn__card se__card   vh-100">
-  
+         {/* <header className="se__header  ">
+     
+          <div className="se__brand"  style={{
+    justifyContent: "flex-start",
+  }}>
+            <img className="se__logo" src={GovDubai} alt="smarTemployee" />
+              <div className=" d-flex flex-column justify-content-start
+    align-items-center g-4 font-title py-2">
+            <span className="se__brand-ar text-center  fw-medium pb-2 fs-2 ">{card.titleAr} </span>
+            <span className="se__brand-en text-center fw-medium fs-2" >{card.titleEn}</span>
+            </div>
+          </div>
+        </header> */}
    <header className="se__header">
       {/* Top Row: logo left */}
       <div className="d-flex align-items-start justify-content-between w-100">
@@ -66,15 +73,14 @@ const card ={
           <span className="se__pill se__pill--en fw-normal  fs-6 h-auto px-2 ">{card.descEn}</span>
           <span className="se__pill se__pill--ar fw-normal fs-6 h-auto px-2">{card.descAr}</span>
         </div>
-         <div className=" pb-4  position-relative " >
+         <div className=" pb-4  position-relative " style={{height:'310px'}}>
           <div className="se__roles h-100">
           <ul className="se__list se__list--en justify-content-start
     align-content-start  pb-4">
-                    {left.map(i => (
-              <li style={{minHeight: 'unset'}} key={i.slug}>
-                <Link className="dn__link"   style={{ textDecoration: 'none', color: 'inherit' }} to={`/projects/dda/dubai-now/${i.slug}`}>{i.en}</Link>
-              </li>
-            ))}
+               {card.activitiesEn.map((item) => <li className="fs-6" key={item}>
+                      <strong>{item.strong} </strong>
+                      
+                      {item.normal}</li>)}
         
           </ul>
 
@@ -82,28 +88,37 @@ const card ={
 
           <ul className="se__list se__list--ar justify-content-start
     align-content-start  pb-4 font-dda_ar fs-6">
-             {right.map(i => (
-              <li style={{minHeight: 'unset'}} key={i.slug}>
-                <Link className="dn__link" style={{ textDecoration: 'none', color: 'inherit' }} to={`/projects/dda/dubai-now/${i.slug}`} dir="rtl">{i.ar}</Link>
-              </li>
-            ))}
+            {card.activitiesAr.map((item) => <li className="fs-6"  key={item}>
+                      <strong>{item.strong} </strong>
+                      
+                      {item.normal}</li>)}
           </ul>
            </div>
            {/* CTA */}
             <div className="se__cta  position-absolute   start-50 translate-middle-x d-flex flex-column justify-content-center align-items-center g-4" style={{bottom:'0px'}}>
                  <img className="dn__qr" src={transportQr} alt="QR" />
-          
+              {/* <button type="button" className="se__btn ">
+                <span className="se__btn-ar font-dda_ar ">جرّب الآن</span>
+                <span className="se__btn-en ">EXPLORE</span>
+              </button> */}
             </div>
         </div>
 
-    
+        {/* <div className="dn__cta">
+          <img className="dn__qr" src={TradeQR} alt="QR" />
+          <Link to={`/projects/dda/dubai-now/${dubaiNowItems[0].slug}`} className="dn__btn">
+            <span className="dn__btn-ar">جرّب الآن</span>
+            <span className="dn__btn-en">EXPLORE</span>
+          </Link>
+        </div> */}
 
-       <footer className="dn__logos">
-          <img src={LogosStrip} alt="Dubai Now partners" />
+        <footer className="dn__logo">
+          <img src={rtaLogo}  width='160px' alt="Dubai Now partners" />
         </footer>
       </div>
     </section>
   );
 });
 
-export default DubaiNow;
+export default DubaiTransport;
+
