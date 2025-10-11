@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+﻿@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 
 
@@ -446,6 +446,7 @@
   border-width: 2px;
   text-transform: uppercase;
   letter-spacing: 0.08em;
+  margin-top: 15em;
 }
 
 .c42-info__actions {
@@ -2036,7 +2037,7 @@ position: relative;
 }
 
 .dda-trade__feature-card li::before {
-  content: "�";
+  content: "ï¿½";
   position: absolute;
   left: 0;
   color: #8dd0ff;
@@ -2180,6 +2181,7 @@ position: relative;
   font-size: clamp(0.75rem, 1.6vw, 0.9rem);
   text-transform: uppercase;
   letter-spacing: 0.08em;
+  margin-top: 15em;
 }
 
 .dda-trade__partners li {
@@ -2603,7 +2605,7 @@ position: relative;
       color: var(--text);
 
       &::before {
-        content: "•";
+        content: "â€¢";
         position: absolute;
         left: 0;
         top: 0;
@@ -2816,7 +2818,7 @@ position: relative;
 //     color: var(--text);
 
 //     &::before {
-//       content: "•";
+//       content: "â€¢";
 //       position: absolute;
 //       left: 0;
 //       top: 0;
@@ -3139,7 +3141,7 @@ position: relative;
     color: var(--text);
 
     &::before {
-      content: "•";
+      content: "â€¢";
       position: absolute;
       left: 0;
       top: 0;
@@ -3523,7 +3525,7 @@ position: relative;
 
 .dn__list--en li::before,
 .dn__list--ar li::after {
-  content: "–";
+  content: "â€“";
   color: #1c4aa8;
   font-weight: 700;
   margin: 0 8px;
@@ -3743,3 +3745,46 @@ position: relative;
   width: clamp(96px, 14vw, 140px);
   height: auto;
 }
+
+.dda-hero {
+  background-color: #f8f9fc;
+}
+
+.dda-hero-card {
+  max-width: 420px;
+  width: 100%;
+}
+
+.dda-hero-logo {
+  max-width: 440px;
+  margin-bottom: 1.5rem;
+}
+
+.dda-hero-tagline {
+  font-size: 0.75rem;
+  letter-spacing: 0.22em;
+  margin-bottom: 0;
+}
+
+.dda-hero-cta {
+  margin-top: 15em;
+}
+
+.dda-hero-btn {
+  background-color: #0d1e5b;
+  border-color: #0d1e5b;
+  border-radius: 0.75rem;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+.dda-hero-btn:hover {
+  background-color: #0b1a50;
+  border-color: #0b1a50;
+}
+
+.dda-hero-btn:focus-visible {
+  box-shadow: 0 0 0 0.25rem rgba(13, 30, 91, 0.35);
+}
+
