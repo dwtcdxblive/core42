@@ -34,9 +34,11 @@ export default function JusticeInDubai() {
             </ul>
           </article>
         <div className="trade__cta">
-          <button type="button" className="bg-transparent border-0">
-        <img src={Explore} className="w-50" alt="explore"/>
-          </button>
+            <a  
+            href="https://www.buildindubai.gov.ae/"
+            type="button" className="bg-transparent border-0 p-0 text-center text-decoration-none">
+              <img src={Explore} className="w-50" alt="Explore" />
+            </a>
         </div>
           {/* AR card */}
           <article className="trade__card trade__card--ar">

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+﻿import { Link } from "react-router-dom"
 
 const DDALanding = () => {
   return (
@@ -25,15 +25,33 @@ const DDALanding = () => {
           <Link className="dda-secondary-btn" to="trade">
             View Trade Showcase
           </Link>
-           <Link className="dda-secondary-btn" to="build">
+          <Link className="dda-secondary-btn" to="build">
             View build Showcase
           </Link>
-             <Link className="dda-secondary-btn" to="justice">
+          <Link className="dda-secondary-btn" to="justice">
             View justice Showcase
+          </Link>
+          <Link className="dda-secondary-btn" to="codai">
+            Open CODAI Experience
+          </Link>
+          <Link className="dda-secondary-btn" to="ai-sampling">
+            Open AI Sampling Experience
+          </Link>
+          <Link className="dda-secondary-btn" to="dubai-population">
+            Open Dubai Population Experience
+          </Link>
+          <Link className="dda-secondary-btn" to="data-statistics">
+            Open Data Statistics Experience
+          </Link>
+          <Link className="dda-secondary-btn" to="data-marketplace">
+            Open Data Marketplace Experience
           </Link>
           <a className="dda-secondary-btn" href="https://prod.shail.ae/wv/linking/" target="_blank" rel="noreferrer">
             View Production Reference
           </a>
+          <Link className="dda-secondary-btn" to="dubai-now">
+            View Dubai Now
+          </Link>
         </div>
       </section>
     </main>
