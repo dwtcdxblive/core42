@@ -19,6 +19,16 @@ const DDALanding = () => {
           <Link className="dda-secondary-btn" to="smartemployee">
             View SmartEmployee Journey
           </Link>
+          <Link className="dda-secondary-btn" to="sourcinagent">
+            View Sourcing Agents
+          </Link>
+     
+       <Link className="dda-secondary-btn" to="productcopilot">
+            View PRODUCT COPILOT & AI COMMITTEE
+          </Link>
+           <Link className="dda-secondary-btn" to="recruitment">
+            View RECRUITMENT AGENTS
+          </Link>
           <Link className="dda-secondary-btn" to="agents-suite">
             Explore Agents Suite
           </Link>

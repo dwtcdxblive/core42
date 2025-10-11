@@ -52,7 +52,7 @@ const sectionTitleAr= "المهام";
         <div className=" pb-4  vh-50 position-relative ">
           <div className="se__roles">
           <ul className="se__list se__list--en  pb-4">
-               {activitiesEn.map((item) => <li className="fs-4" key={item}>
+               {activitiesEn.map((item,index) => <li  key={index}>
                       <strong>{item.strong} </strong>
                       
                       {item.normal}</li>)}
@@ -62,7 +62,7 @@ const sectionTitleAr= "المهام";
           <span className="se__divider se__divider--roles" aria-hidden="true" />
 
           <ul className="se__list se__list--ar  pb-4 font-dda_ar fs-6">
-            {activitiesAr.map((item) => <li className="fs-4"  key={item}>
+            {activitiesAr.map((item,index) => <li   key={index}>
                       <strong>{item.strong} </strong>
                       
                       {item.normal}</li>)}
