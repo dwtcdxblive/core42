@@ -61,12 +61,12 @@ const activitiesAr = [
     </header>
       {/* Roles header pills */}
         <div className="se__roles-head  py-2  ">
-          <span className="se__pill se__pill--en   fs-09 h-auto px-2 ">{headSection_en}</span>
-          <span className="se__pill se__pill--ar  fs-09 h-auto px-2">{headSection_ar}</span>
+          <span className="se__pill se__pill--en   fs-08 h-auto px-2 ">{headSection_en}</span>
+          <span className="se__pill se__pill--ar  fs-08 h-auto px-2">{headSection_ar}</span>
         </div>
          <div className=" pb-4  position-relative " style={{height:'380px'}}>
           <div className="se__roles h-100">
-          <ul className="se__list se__list--en justify-content-start
+          <ul className="se__list se__list--en justify-content-start px-0
     align-content-start  pb-4">
                {activitiesEn.map((item) => <li className="fs-08" key={item}>
                       <strong>{item.strong} </strong>

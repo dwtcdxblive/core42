@@ -22,7 +22,7 @@ import TourismDubai from "./TourismDubai.jsx"
 import JusticeDubai from "./JusticeDubai.jsx"
 import BuildDubai from "./buildDubai.jsx"
 import VideoBackground from "./VideoBackground.jsx"
-
+import Infostructure from "./Infostructure.jsx"
 const DDA = () => {
   return (
 <div className="position-relative min-vh-100">
@@ -53,6 +53,9 @@ const DDA = () => {
       <Route path="dubai-now" element={<DubaiNow />} />
       <Route path="dubai-now/:slug" element={<DubaiNowDetail />} />
       <Route path="dubai-transport" element={<DubaiTransport />} />
+      <Route path="dubai-Infostructure" element={<Infostructure />} />
+
+      
     </Routes>
   </div>
 </div>

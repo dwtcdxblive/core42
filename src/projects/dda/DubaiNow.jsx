@@ -106,6 +106,7 @@ const cta_ar = "جرب الآن";
           <span className="se__pill se__pill--en    h-auto px-2 " style={{ fontSize: '0.8rem' }}>{headSection_en}</span>
           <span className="se__pill se__pill--ar   h-auto px-2" style={{ fontSize: '0.8rem' }}>{headSection_ar}</span>
         </div>
+        
          <div className=" pb-2  position-relative " >
           <div className="se__roles h-100">
           <ul className="se__list se__list--en justify-content-start

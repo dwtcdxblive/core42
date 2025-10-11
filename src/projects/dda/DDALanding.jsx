@@ -68,6 +68,9 @@ const DDALanding = () => {
              <Link className="dda-secondary-btn" to="investDubai">
             View Dubai Invest
           </Link>
+             <Link className="dda-secondary-btn" to="dubai-Infostructure">
+            View Dubai Infrastructure
+          </Link>
           
              <Link className="dda-secondary-btn" to="tourismDubai">
             View  Tourism Dubai

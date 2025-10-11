@@ -33,7 +33,7 @@ const sectionTitleAr= "المهام";
     <section className="se vh-100">
       <div className="se__card   vh-100">
         {/* Header / Logo */}
-        <header className="se__header h-25 ">
+        <header className="se__header ">
      
           <div className="se__brand">
                <img className="se__logo" src={Logo} alt="smarTemployee" />
@@ -41,7 +41,17 @@ const sectionTitleAr= "المهام";
           </div>
         </header>
 
-
+        <div className="se__intro text-ddablue py-0">
+          <p className="se__intro-en">
+            <strong>Your Smart Work Companion:</strong> Guides employees with
+            instant answers, seamless requests, and policy
+          </p>
+          <span className="se__divider" aria-hidden="true" />
+          <p className="se__intro-ar">
+            <strong>رفيقك الذكي في العمل:</strong> يوجّه الموظفين بإجابات
+            فورية، وطلبات سلسة، ويتيح الوصول السهل إلى القوانين والسياسات.
+          </p>
+        </div>
         {/* Roles header pills */}
         <div className="se__roles-head  py-2  ">
           <span className="se__pill se__pill--en  fs-5 h-auto ">{sectionTitleEn}</span>
