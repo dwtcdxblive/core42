@@ -24,7 +24,7 @@ const activitiesEn= [
   { strong: "التسوية المالية", normal: " - ضمان الدقة المالية" },
   { strong: "منشئ جداول القوى العاملة", normal: " - جداول عمل محسّنة" },
 ];
-  const titleEn= "Sourcing Agents";
+const titleEn= "Sourcing Agents";
 const titleAr= "وكلاء التوريد";
 
 const sectionTitleEn= "ROLES";
