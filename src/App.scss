@@ -3518,8 +3518,8 @@ text-align: center;
 
  
 
-    padding-right: 5.5rem !important;
-    padding-left: 5.5rem !important;
+    // padding-right: 5.5rem !important;
+    // padding-left: 5.5rem !important;
 
   min-height: 100vh;               /* full viewport height */
   display: flex;
@@ -3601,21 +3601,22 @@ text-align: center;
     margin-bottom: 14px;
     min-height: 120px; /* helps equalize heights */
     // height: 260px;
-    height: 30VH;
+    // height: 30VH;
+    height: 22VH;
   }
   &__intro-en {
   
     line-height: 1.5;
     font-size: 21px;
     font-weight: 600;
-     height: 120px;
+     height: 90px;
   }
   &__intro-ar {
     font-size: 21px;
     line-height: 1.6;
     direction: rtl;
     text-align: right;
-     height: 120px;
+     height: 100px;
   }
   &__divider {
     width: 1px;
@@ -3675,7 +3676,7 @@ text-align: center;
     align-items: stretch;
     // min-height: 180px;
         // height: 45vh;
-            height: 588px;
+            height: 460px;
 
     padding-bottom: 40px;
     border-top: 0px;
@@ -3690,8 +3691,8 @@ text-align: center;
     margin: 0;
     padding: 0 10px;
     list-style: none;
-    display: grid;
-    grid-auto-rows: 1fr;
+    // display: grid;
+    // grid-auto-rows: 1fr;
 
     li {
       position: relative;

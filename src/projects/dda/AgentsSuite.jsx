@@ -76,15 +76,15 @@ const AgentsSuite = memo(function AgentsSuite() {
 
 
 
- <section className="ags py-4 w-100 d-flex justify-content-center">
+ <section className="ags py-4 w-100 d-flex justify-content-center" style={{paddingLeft:'0px',paddingRight:'0px'}}>
 
-  <div className="row w-100 g-4 justify-content-center align-items-stretch row-cols-1 row-cols-md-2 row-cols-lg-3">
+  <div className="row w-100 g-4 justify-content-center align-items-stretch row-cols-1 row-cols-md-3 row-cols-lg-3" >
      
           {cards.map((c) => (
             <div key={c.key} className="ags__card_container col d-flex">
               <article className="ags__card position-relative">
                 {/* header */}
-                <header className="ags__header ">
+                <header className="ags__header  vh-25">
                   <div className="ags__agent-brand">
                     <span className="ags__brand-ar font-dda_ar">{c.titleAr}</span>
                     <span className="ags__brand-en">{c.titleEn}</span>
@@ -110,8 +110,8 @@ const AgentsSuite = memo(function AgentsSuite() {
                   {/* Roles two-column list */}
                   <div className=" pb-4  vh-50 position-relative ">
                     <div className="ags__roles">
-                    <ul className="ags__list ags__list--en  pb-4">
-                        {c.activitiesEn.map((item) => <li className="fs-4" key={item}>
+                    <ul className="ags__list ags__list--en h-70 pb-4">
+                        {c.activitiesEn.map((item,index) => <li className="fs-4" key={index}>
                                 <strong>{item.strong} </strong>
                                 
                                 {item.normal}</li>)}
@@ -120,8 +120,8 @@ const AgentsSuite = memo(function AgentsSuite() {
 
                     <span className="ags__divider ags__divider--roles" aria-hidden="true" />
 
-                    <ul className="ags__list se__list--ar  pb-4 font-dda_ar fs-6">
-                      {c.activitiesAr.map((item) => <li className="fs-4"  key={item}>
+                    <ul className="ags__list se__list--ar h-70 pb-4 font-dda_ar fs-6">
+                      {c.activitiesAr.map((item,index) => <li className="fs-4"  key={index}>
                                 <strong>{item.strong} </strong>
                                 
                                 {item.normal}</li>)}

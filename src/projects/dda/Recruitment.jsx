@@ -24,7 +24,7 @@ const Recruitment = memo(function Recruitment() {
 
 
 
- <section className="ags py-4 w-100 justify-content-center flex-column">
+ <section className="ags py-4 w-100 justify-content-center flex-column" >
       {/* header */}
                 <header className="ags__header vh-25 ">
                   <div className="ags__agent-brand g-4">
@@ -56,7 +56,7 @@ const Recruitment = memo(function Recruitment() {
         
 
                      <ul className="ags__list ags__list--en h-70  pb-4" >
-                        {activitiesEn.map((item) => <li className="fs-2 px-4 " style={{minHeight:'unset'}}  key={item}>
+                        {activitiesEn.map((item,index) => <li key={index} className="fs-2 px-4 " style={{minHeight:'unset'}}  >
                                 <strong>{item.strong} </strong>
                                 
                                 {item.normal}</li>)}
@@ -89,7 +89,7 @@ const Recruitment = memo(function Recruitment() {
         
 
                     <ul className="ags__list ags__list--ar h-50  pb-4 font-dda_ar fs-6">
-                      {activitiesAr.map((item) => <li className="fs-1 min-vh-0  px-4  " style={{minHeight:'unset'}}  key={item}>
+                      {activitiesAr.map((item,index) => <li key={index} className="fs-1 min-vh-0  px-4  " style={{minHeight:'unset'}} >
                                 <strong>{item.strong} </strong>
                                 
                                 {item.normal}</li>)}
