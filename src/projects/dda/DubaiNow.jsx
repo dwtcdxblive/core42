@@ -60,15 +60,15 @@ const card ={
         <span className="se__brand-ar fw-medium d-block fs-4  font-dda_ar">
          {card.titleAr}
         </span>
-        <span className="se__brand-en fw-bold d-block pb-2 fs-5 text-uppercase mt-1">
+        <span className="se__brand-en fw-bold d-block pb-2 fs-5 text-uppercase mt-1" >
      {card.titleEn}
         </span>
       </div>
     </header>
       {/* Roles header pills */}
         <div className="se__roles-head  py-2  ">
-          <span className="se__pill se__pill--en fw-normal  fs-6 h-auto px-2 ">{card.descEn}</span>
-          <span className="se__pill se__pill--ar fw-normal fs-6 h-auto px-2">{card.descAr}</span>
+          <span className="se__pill se__pill--en fw-normal   h-auto px-2 " style={{ fontSize: '0.8rem' }}>{card.descEn}</span>
+          <span className="se__pill se__pill--ar fw-normal  h-auto px-2" style={{ fontSize: '0.8rem' }}>{card.descAr}</span>
         </div>
          <div className=" pb-2  position-relative " >
           <div className="se__roles h-100">
