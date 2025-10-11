@@ -4224,3 +4224,61 @@ text-align: center;
 
 /* optional: tighten logo width on large screens */
 .dda-hero-logo { max-width: 360px; }
+.dark-blue{
+  color:#1c2654
+}
+.dark-blue-bg{
+
+  background-color:#1c2654;
+}
+
+.blue-font{
+  color:#1761ab
+}
+.blue-font-bg{
+
+  background-color:#1761ab;
+}
+
+.bg-gray{
+  background-color:#f6f6f6;
+}
+.ls-1{
+  letter-spacing: 1px;
+}
+.dda__btn {
+    display: grid;
+    place-items: center;
+    gap: 3px;
+    width: 160px;
+    height: 55px;
+ 
+
+    border-radius: 8px;
+    background:  var(--blue-900);
+    color: #fff;
+    border: 1px solid var(--blue-900);
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 6px 14px var(--blue-900);
+    transition: transform .08s ease, box-shadow .2s ease;
+
+    .se__btn-ar {
+      font-size: 16px;
+      font-weight: 800;
+    }
+
+    .se__btn-en {
+      font-size: 16px;
+      letter-spacing: 0.06em;
+    }
+
+    &:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 10px 18px var(--blue-900);
+    }
+
+    &:active {
+      transform: translateY(0);
+    }
+  }
