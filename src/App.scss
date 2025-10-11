@@ -2603,11 +2603,11 @@ text-align: center;
 
     &--ar {
       direction: rtl;
-      padding-right: 1.5rem;
+      padding-right: 0.5rem;
     }
       &--en {
   
-      padding-left: 1.5rem;
+      padding-left: 0.5rem;
     }
   }
 
@@ -2668,7 +2668,7 @@ text-align: center;
     align-items: center;
 
     /* optional: guarantees a minimum row height so mixed wrapping still looks tidy */
-    min-height: 48px;
+    min-height: 33px;
 
     strong {
       font-weight: 700;
@@ -3700,7 +3700,7 @@ text-align: center;
       font-size: 16px;
       line-height: 1.45;
       color: var(--text);
-      min-height: 48px;
+      min-height: 38px;
 
       &::before {
         content: "-";
@@ -4027,7 +4027,7 @@ text-align: center;
   }
 
   .dn__logos {
-    margin-top: 12px;
+    margin-top: 0px;
   }
 }
 
@@ -4315,4 +4315,10 @@ text-align: center;
   background-repeat: repeat;
   background-size: cover;
  /* background: linear-gradient(360deg, rgba(14, 33, 44, 0) 0%, rgba(14, 33, 44, 0.95) 79.33%, #0E212C 100%); */
+}
+.fs-09{
+font-size: 0.9rem !important;
+}
+.fs-08{
+font-size: 0.8rem !important;
 }
