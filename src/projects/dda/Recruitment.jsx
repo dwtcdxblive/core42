@@ -15,11 +15,11 @@ import { memo } from "react";
   ];
 
 
-const sectionTitleEn = "PRECRUITMENT AGENTS";
+const sectionTitleEn = "RECRUITMENT AGENTS";
 const sectionTitleAr = "وكلاء التوظيف";
 
 
-const Procurment = memo(function Procurment() {
+const Recruitment = memo(function Recruitment() {
   return (
 
 
@@ -113,4 +113,4 @@ const Procurment = memo(function Procurment() {
   );
 });
 
-export default Procurment;
+export default Recruitment;

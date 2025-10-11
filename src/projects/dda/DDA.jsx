@@ -8,7 +8,7 @@ import BuildInDubai from "./DDABuild.jsx"
 import JusticeInDubai from "./DDAJustice.jsx"
 import SourcingAgent from "./SourcingAgent.jsx"
 import ProductCopilot from "./ProductCopilot.jsx"
-import Procurment from "./Procurment.jsx"
+import Recruitment from "./Recruitment.jsx"
 const DDA = () => {
   return (
     <Routes>
@@ -18,7 +18,7 @@ const DDA = () => {
       <Route path="smartemployee" element={<SmartEmplyee />} />
       <Route path="sourcinagent" element={<SourcingAgent />} />
       <Route path="productcopilot" element={<ProductCopilot />} />
-      <Route path="procurment" element={<Procurment />} />
+      <Route path="recruitment" element={<Recruitment />} />
 
 
 
