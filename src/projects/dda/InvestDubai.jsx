@@ -23,7 +23,8 @@ const InvestDubai = () => {
     { data: "الاستشارات والخدمات ذات القيمة المضافة" },
   ];
 
-
+const headSection_en = "DIGITAL CITY EXPERIENCES COVERING 700 SERVICES FOR MORE THAN 50 ENTITIES";
+const headSection_ar = "تجارب المدينة الرقمية تغطي أكثر من 700 خدمة لأكثر من 50 جهة";
 
   return (
     <main className="min-vh-100 d-flex align-items-start bg-light">
@@ -52,9 +53,8 @@ const InvestDubai = () => {
         <div className="row align-items-start bg-gray rounded-1  justify-content-center gy-4 mt-5">
           {/* Left English Block */}
           <div className="col-12 col-md-5">
-            <div className="blue-font-bg text-white rounded-3 p-2 mb-3 fw-bold font-GothamMedium fs-5">
-              DIGITAL CITY EXPERIENCES COVERING <br />
-              700 SERVICES FOR MORE THAN 50 ENTITIES
+            <div className="blue-font-bg text-white rounded-3 p-2 mb-3 fw-bold font-GothamMedium fs-5" style={{height:'7vh'}}>
+            {headSection_en}
             </div>
             <ul className="list-unstyled fw-semibold blue-font mb-0 font-GothamMedium fs-3">
               {english_content.map((item, idx) => (
@@ -79,9 +79,8 @@ const InvestDubai = () => {
 
           {/* Right Arabic Block */}
           <div className="col-12 col-md-5" dir="rtl">
-            <div className="blue-font-bg text-white rounded-3 p-2 mb-3 fw-bold text-end font-GE_SSBold fs-5">
-              تجارب المدينة الرقمية تغطي أكثر من <br />
-              خدمة لأكثر من
+            <div className="blue-font-bg text-white rounded-3 p-2 mb-3 fw-bold text-end font-GE_SSBold fs-5" style={{height:'7vh'}}>
+           {headSection_ar}
             </div>
             <ul className="list-unstyled fw-semibold blue-font mb-0 text-end font-GE_SSMedium fs-3">
               {arabic_content.map((item, idx) => (
