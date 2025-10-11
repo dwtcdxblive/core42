@@ -16,13 +16,87 @@ function slugify(text) {
     : '';
 }
 
+/** Service key -> display label (covers tricky cases; falls back gracefully) */
+function displayServiceName(key = '') {
+  const map = {
+    Internet: 'Internet',
+    SecureInternetAccess: 'Secure Internet Access',
+    G2GConnectivity: 'G2G Connectivity',
+    MPLS: 'MPLS',
+    VPN: 'VPN',
+    ApplicationPerformanceMonitoring: 'Application Performance Monitoring',
+    InfrastructureasaService: 'Infrastructure as a Service',
+    BackupasaService: 'Backup as a Service',
+    DatabaseasaService: 'Database as a Service',
+    DisasterRecoveryasaService: 'Disaster Recovery as a Service',
+    EmailasaService: 'Email as a Service',
+    AIServices: 'AI Services',
+    KubernetesasaService: 'Kubernetes as a Service',
+    GPUasaService: 'GPU as a Service',
+    AdvancedLoadBalancingasaService: 'Advanced Load Balancing as a Service',
+    AppLaunchpad: 'App Launchpad',
+    SDWANasaService: 'SD-WAN as a Service',
+    GSB: 'GSB',
+    APIMarketplace: 'API Marketplace',
+    DigitalVault: 'Digital Vault',
+    UAEPASS: 'UAE PASS',
+    NCRM: 'NCRM',
+    MabroukMaYakUsrati: 'Mabrouk MaYak & Usrati',
+    mSurvey: 'mSurvey',
+    DigitalGovernmentFileshare: 'Digital Government Fileshare',
+  };
+
+  if (map[key]) return map[key];
+
+  // Generic fallback: split camel case and fix "asa" → "as a"
+  return key
+    .replace(/asa/g, ' as a ')
+    .replace(/([A-Z])/g, ' $1')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+/** Robust numeric parser: handles numbers, strings, commas, and K/M suffixes */
+function toNumber(val) {
+  if (val == null) return 0;
+  if (typeof val === 'number') return isFinite(val) ? val : 0;
+
+  const s = String(val).replace(/[, ]/g, '');
+  // Match "2.5M", "800K", "2500"
+  const m = s.match(/^(-?\d*\.?\d+)([KkMm])?$/);
+  if (m) {
+    let n = parseFloat(m[1]);
+    const suf = m[2]?.toLowerCase();
+    if (suf === 'm') n *= 1_000_000;
+    if (suf === 'k') n *= 1_000;
+    return isNaN(n) ? 0 : n;
+  }
+  const n = parseFloat(s);
+  return isNaN(n) ? 0 : n;
+}
+
+/** Compact number formatter (e.g., 2.6M) */
+const compactFmt = new Intl.NumberFormat('en-US', { notation: 'compact', maximumFractionDigits: 1 });
+function formatAED(n) {
+  const num = toNumber(n);
+  return num ? `${compactFmt.format(num)} AED` : 'N/A';
+}
+function formatHours(n) {
+  const num = toNumber(n);
+  return num ? `${compactFmt.format(num)} Hours` : 'N/A';
+}
+function formatTonnes(n) {
+  const num = toNumber(n);
+  return num ? `${compactFmt.format(num)} Tonnes` : 'N/A';
+}
+
 export default function TDRA() {
   const [searchTerm, setSearchTerm] = useState('');
   const [items, setItems] = useState([]);
   const [selectedEntity, setSelectedEntity] = useState(null);
   const dropdownRef = useRef(null);
 
-  // MUST match Mongo schema suffixes
+  // MUST match Mongo schema suffixes (backend keys)
   const servicesList = [
     'Internet',
     'SecureInternetAccess',
@@ -69,23 +143,29 @@ export default function TDRA() {
 
             if (entity[usingKey]) {
               adoptedServices.push({
-                serviceName: service,
-                costSaved: entity[costKey] ?? 'N/A',
-                timeSaved: entity[timeKey] ?? 'N/A',
-                co2Reduced: entity[co2Key] ?? 'N/A',
+                serviceKey: service,                      // backend key
+                serviceName: displayServiceName(service), // UI label
+                costSaved: toNumber(entity[costKey]),
+                timeSaved: toNumber(entity[timeKey]),
+                co2Reduced: toNumber(entity[co2Key]),
               });
             } else {
-              notAdoptedServices.push(service);
+              notAdoptedServices.push(displayServiceName(service));
             }
           });
+
+          // Compute totals dynamically across adopted services
+          const totalCostSaved = adoptedServices.reduce((sum, s) => sum + toNumber(s.costSaved), 0);
+          const totalTimeSavedGov = adoptedServices.reduce((sum, s) => sum + toNumber(s.timeSaved), 0);
+          const totalCo2Reduced = adoptedServices.reduce((sum, s) => sum + toNumber(s.co2Reduced), 0);
 
           return {
             ...entity,
             adoptedServices,
             notAdoptedServices,
-            totalCostSaved: entity.AnnualcostsavingSecureInternetAccess ?? 'N/A',
-            totalTimeSavedGov: entity.AnnualtimesavingSecureInternetAccess ?? 'N/A',
-            totalCo2Reduced: entity.AnnualCo2reductionsSecureInternetAccess ?? 'N/A',
+            totalCostSaved: formatAED(totalCostSaved),
+            totalTimeSavedGov: formatHours(totalTimeSavedGov),
+            totalCo2Reduced: formatTonnes(totalCo2Reduced),
           };
         });
 
@@ -157,7 +237,6 @@ export default function TDRA() {
         <div className="container">
           <div className="row justify-content-center flex-column align-items-center g-3">
             <div className="col-md-6 mt-4">
-              {/* Title only when nothing selected (as per your UI) */}
               {!selectedEntity && <h2 className="text-center">DGOV Impact</h2>}
 
               {/* Search (with unclipped dropdown) */}
@@ -201,10 +280,9 @@ export default function TDRA() {
               </div>
             </div>
 
-            {/* Overall impact trigger (kept where it was in your UI) */}
             {!selectedEntity && renderOverallImpactButton()}
 
-            {/* Overall impact modal (unchanged UI) */}
+            {/* Overall impact modal (static example UI—replace with real overall totals if needed) */}
             <div
               className="modal fade"
               id="exampleModal"
@@ -251,7 +329,7 @@ export default function TDRA() {
               </div>
             </div>
 
-            {/* Selected entity renders below (unchanged) */}
+            {/* Selected entity renders below */}
             <div className="w-100 mt-3">
               {selectedEntity ? (
                 <EntityPage
@@ -260,10 +338,9 @@ export default function TDRA() {
                   totalCostSaved={selectedEntity.totalCostSaved}
                   totalTimeSavedGov={selectedEntity.totalTimeSavedGov}
                   totalCo2Reduced={selectedEntity.totalCo2Reduced}
-                  servicesAdopted={selectedEntity.adoptedServices}
-                  totalServices={24}
-                  adoptedServices={selectedEntity.adoptedServices}
-                  notAdoptedServices={selectedEntity.notAdoptedServices}
+                  totalServices={servicesList.length}
+                  adoptedServices={selectedEntity.adoptedServices}        // [{serviceKey, serviceName, costSaved, timeSaved, co2Reduced}]
+                  notAdoptedServices={selectedEntity.notAdoptedServices} // [displayName,...]
                 />
               ) : (
                 <div className="text-center text-muted">
