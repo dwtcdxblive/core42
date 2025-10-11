@@ -6,13 +6,13 @@ import CoreProductsFrame from "../../assets/core-our-products.svg"
 import CoreContact from "../../assets/core-contact.svg"
 import CoreBack from "../../assets/core-back.svg"
 
-const pageTitle = "Cloud & AI Delivery Services"
-const videoTitleId = "deliveryServicesVideoTitle"
-const videoHeading = "Cloud & AI Delivery Services Overview"
+const pageTitle = "Core42 Co-location"
+const videoTitleId = "coLocationVideoTitle"
+const videoHeading = "Core42 Co-location Overview"
 const videoEmbedSrc = "https://player.castr.com/live_8005c6e07e4911f0b36595c94a84f69d?range=1757414965-2&abr=false&namedHls=true"
 
 const resourceTiles = [
-  { title: "Sales Deck", href: "https://drive.google.com/file/d/1EvMouvWpwDUERMhWxTEbDDSrUYMOqPIY/view?usp=drive_link" },
+  { title: "Sales Deck", href: "https://drive.google.com/file/d/1GtNzkCTRJsFNFCe1mQ8u548IjJIstGUM/view?usp=drive_link" },
 ]
 
 const primaryActions = [
@@ -30,7 +30,7 @@ const primaryActions = [
   },
 ]
 
-const C42DeliveryServices = () => {
+const C42CoLocation = () => {
   const [navOpen, setNavOpen] = useState(false)
   const [videoOpen, setVideoOpen] = useState(false)
   const closeButtonRef = useRef(null)
@@ -69,7 +69,7 @@ const C42DeliveryServices = () => {
 
 
   return (
-    <main className="c42-delivery min-vh-100 py-5 d-flex flex-column align-items-center">
+    <main className="c42-signature min-vh-100 py-5 d-flex flex-column align-items-center">
       <header className="d-flex flex-column w-100 flex-lg-row align-items-center gap-4 text-white justify-content-between header-spacing">
         <div className="text-center text-lg-start">
           <img src={CoreLogoText} alt="Core 42" className="img-fluid mb-3" />
@@ -176,7 +176,8 @@ const C42DeliveryServices = () => {
   )
 }
 
-export default C42DeliveryServices
+export default C42CoLocation
+
 
 
 

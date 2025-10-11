@@ -6,15 +6,13 @@ import CoreProductsFrame from "../../assets/core-our-products.svg"
 import CoreContact from "../../assets/core-contact.svg"
 import CoreBack from "../../assets/core-back.svg"
 
-const pageTitle = "Core42 Oracle Fusion"
+const pageTitle = "Signature Fusion Cloud"
 const videoTitleId = "oracleFusionVideoTitle"
-const videoHeading = "Core42 Oracle Fusion Overview"
+const videoHeading = "Signature Fusion Cloud Overview"
 const videoEmbedSrc = "https://player.castr.com/live_8005c6e07e4911f0b36595c94a84f69d?range=1757414965-2&abr=false&namedHls=true"
 
 const resourceTiles = [
-  { title: "Video", type: "video" },
-  { title: "Brochure", href: "#" },
-  { title: "Live Demo", href: "#" },
+  { title: "Sales Deck", href: "https://drive.google.com/file/d/1_GB6XF-sFMIBNquwwiaoAbTRQCSQu_c0/view?usp=drive_link" },
 ]
 
 const primaryActions = [

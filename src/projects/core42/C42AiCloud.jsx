@@ -13,7 +13,7 @@ const videoEmbedSrc = "https://player.castr.com/live_8005c6e07e4911f0b36595c94a8
 
 const resourceTiles = [
   { title: "Video", type: "video" },
-  { title: "Brochure", href: "#" },
+  { title: "Sales Deck", href: "#" },
   { title: "Live Demo", href: "#" },
 ]
 

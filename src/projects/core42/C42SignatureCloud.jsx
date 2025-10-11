@@ -12,9 +12,7 @@ const videoHeading = "Core42 Signature Private Cloud Overview"
 const videoEmbedSrc = "https://player.castr.com/live_8005c6e07e4911f0b36595c94a84f69d?range=1757414965-2&abr=false&namedHls=true"
 
 const resourceTiles = [
-  { title: "Video", type: "video" },
-  { title: "Brochure", href: "#" },
-  { title: "Live Demo", href: "#" },
+  { title: "Sales Deck", href: "https://drive.google.com/file/d/17oMQn9LEKPYZOLPohCfGbmoJrpx9Dk0e/view?usp=drive_link" },
 ]
 
 const primaryActions = [

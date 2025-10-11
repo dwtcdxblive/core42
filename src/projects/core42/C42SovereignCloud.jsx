@@ -13,8 +13,8 @@ const videoEmbedSrc = "https://player.castr.com/live_8005c6e07e4911f0b36595c94a8
 
 const resourceTiles = [
   { title: "Video", type: "video" },
-  { title: "Brochure", href: "#" },
-  { title: "Live Demo", href: "#" },
+  { title: "Sales Deck", href: "https://drive.google.com/file/d/1lWfGlj5PfR-66l_Bul5UZLwcALjbtHcZ/view?usp=drive_link" },
+  { title: "Live Demo", href: "https://demo.g42insight.com/dashboard" },
 ]
 
 const primaryActions = [

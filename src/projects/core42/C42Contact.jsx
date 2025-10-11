@@ -12,7 +12,9 @@ const productOptions = [
   { value: "ai-cloud", label: "AI Cloud" },
   { value: "sovereign", label: "Sovereign Public Cloud" },
   { value: "signature", label: "Signature Private Cloud" },
-  { value: "delivery-services", label: "Delivery Services" },
+  { value: "Cloud & AI Delivery Services", label: "Cloud & AI Delivery Services" },
+  { value: "Co-location", label: "Delivery Services" },
+  { value: "Signature Fusion Cloud", label: "Signature Fusion Cloud" },
   { value: "other", label: "Other" },
 ]
 

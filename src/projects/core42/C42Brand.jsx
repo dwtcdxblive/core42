@@ -9,7 +9,7 @@ import CoreBack from "../../assets/core-back.svg"
 const infoSections = [
   {
     id: "about",
-    title: "About us",
+    title: "Corporate Overview",
     frame: CoreBrand,
   },
 
@@ -31,8 +31,8 @@ const primaryActions = [
 ]
 
 const C42Brand = () => {
-  const goToBrand = () => {}
-  const handleBrandKeyDown = () => {}
+  const goToBrand = () => { window.open("https://drive.google.com/file/d/1Pe7tbfPRCurzajXoJPVUgG_JyS6N8oWw/view?usp=drive_link", "_blank", "noopener") }
+  const handleBrandKeyDown = (event) => { if (event.key === "Enter" || event.key === " ") { goToBrand() } }
   const [navOpen, setNavOpen] = useState(false)
 
   const toggleNav = () => setNavOpen((prev) => !prev)
@@ -53,7 +53,7 @@ const C42Brand = () => {
            <div className="d-flex flex-column gap-5">
              <section className="c42-info__tiles d-flex">
                {infoSections.map((section) => {
-                 const isBrand = section.id === "brand"
+                 const isBrand = section.id === "about"
    
                  return (
                    <article
@@ -112,6 +112,7 @@ const C42Brand = () => {
 }
 
 export default C42Brand
+
 
 
 
