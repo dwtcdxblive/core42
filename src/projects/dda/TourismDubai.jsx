@@ -13,15 +13,15 @@ import GovDubai from "../../assets/dubai-gov.png";
 const TourismDubai = () => {
 
 const activitiesEn = [
-  { strong: "Planning", normal: " - to arrive in Dubai" },
-  { strong: "Experience", normal: " - Dubai" },
-  { strong: "Stay connected", normal: " - with Dubai" },
+  { strong: "Planning to arrive in Dubai" },
+  { strong: "Experience Dubai" },
+  { strong: "Stay connected with Dubai" },
 ];
 
 const activitiesAr = [
-  { strong: "التخطيط", normal: " - للوصول إلى دبي" },
-  { strong: "تجربة", normal: " - دبي" },
-  { strong: "ابق على تواصل", normal: " - مع دبي" },
+  { strong: "التخطيط للوصول إلى دبي" },
+  { strong: "تجربة دبي" },
+  { strong: "ابق على تواصل مع دبي" },
 ];
 const headSection_en = "DIGITAL CITY EXPERIENCES COVERING 21 SERVICES FOR MORE THAN 7 ENTITIES";
 const headSection_ar = "تجارب المدينة الرقمية تغطي أكثر من 21 خدمة لأكثر من 7 جهات";
@@ -62,7 +62,7 @@ const pageTitle_ar = "المنصة الرسمية للسياحة في دبي";
               {activitiesEn.map((item,index) => <li   key={index}>
                       <strong>{item.strong} </strong>
                       
-                      {item.normal}</li>)}
+                      </li>)}
             </ul>
           </div>
 
@@ -93,7 +93,7 @@ const pageTitle_ar = "المنصة الرسمية للسياحة في دبي";
               {activitiesAr.map((item,index) => <li   key={index}>
                       <strong>{item.strong} </strong>
                       
-                      {item.normal}</li>)}
+                      </li>)}
             </ul>
           </div>
         </div>
