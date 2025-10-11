@@ -37,9 +37,11 @@ export default function BuildInDubai() {
           {/* QR + CTA (image button) */}
           <div className="trade__qr">
             <img src={TradeQR} className="trade__qr-img" alt="QR code" />
-            <button type="button" className="bg-transparent border-0 p-0">
+            <a  
+            href="https://www.buildindubai.gov.ae/"
+            type="button" className="bg-transparent border-0 p-0  text-center text-decoration-none">
               <img src={Explore} className="w-50" alt="Explore" />
-            </button>
+            </a>
           </div>
 
           {/* AR card */}
