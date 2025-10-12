@@ -17,21 +17,21 @@ export default function UAEPASS() {
     { 
       src:card_1,
       alt:'card_1',
-      link:''
+      link:"uaepassstg://"
     },
     { 
       src:card_2,
       alt:'card_2',
-      link:''
+      link:"uaepassstg://"
     },
     { 
       src:card_3,
       alt:'card_3',
-      link:''
+      link:"uaepassstg://"
     },{ 
       src:card_4,
       alt:'card_4',
-      link:''
+      link:"https://www.figma.com/design/U9aDLHXUxz29yQrBdWorgI/UAE-PASS-Home-Page-V3?node-id=74-1649&p=f&a%E2%80%A6"
     },
 
    
@@ -54,7 +54,7 @@ export default function UAEPASS() {
 
      <div className="row g-3 justify-content-center mb-4 w-100">
   {features.map((f, i) => (
-    <div key={i} className="col-6 col-md-6 col-lg-5">
+    <div key={i} className="col-6 col-md-6 col-lg-5"  onClick={() => window.open(f.link, "_blank")}  >
       <div className="uaepass__feature">
         <img src={f.src} alt={f.alt} className="img-fluid" />
       </div>
