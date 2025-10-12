@@ -24,7 +24,7 @@ const Recruitment = memo(function Recruitment() {
 
 
 
- <section className="ags py-4 w-100 justify-content-center flex-column" >
+ <section className="ags py-4 bg-transparent w-100 justify-content-center flex-column" >
       {/* header */}
                 <header className="ags__header vh-25 ">
                   <div className="ags__agent-brand g-4">

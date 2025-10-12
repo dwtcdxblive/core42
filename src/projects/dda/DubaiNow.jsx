@@ -6,7 +6,7 @@ import TradeQR from "../../assets/trade-QR.png";
 import { dubaiNowItems } from "./DubaiNowData";
 import rtaLogo from "../../assets/rtaLogo.svg";
 import secondLogo from "../../assets/secondLogo.png";
-
+import dubaiNowTitle from'../../assets/dubaiNowTitle.png';
 
 
 import transportQr from "../../assets/transportQr.png";
@@ -102,12 +102,14 @@ const cta_ar = "جرب الآن";
 
       {/* Centered Titles */}
       <div className="text-center mt-2">
-        <span className="se__brand-ar fw-medium d-block fs-4  font-dda_ar">
+          <img src={dubaiNowTitle} alt="UAE Pass Title" className="w-100 mb-3" />
+        
+        {/* <span className="se__brand-ar fw-medium d-block fs-4  font-dda_ar">
          {pageTitle_ar}
         </span>
         <span className="se__brand-en fw-bold d-block pb-2 fs-5 text-uppercase mt-1" >
      {pageTitle_en}
-        </span>
+        </span> */}
       </div>
     </header>
       {/* Roles header pills */}

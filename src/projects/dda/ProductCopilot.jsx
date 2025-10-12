@@ -40,7 +40,7 @@ const ProductCopilot = memo(function ProductCopilot() {
 
 
 
- <section className="ags py-4 w-100 d-flex justify-content-center">
+ <section className="ags bg-transparent py-4 w-100 d-flex justify-content-center">
 
   <div className="row w-100 g-4 justify-content-around align-items-stretch row-cols-1 row-cols-md-2 row-cols-lg-3">
      

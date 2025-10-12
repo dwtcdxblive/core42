@@ -38,7 +38,7 @@ const Infostructure = memo(function Infostructure() {
 
 
 
- <section className="ags se p-4 w-100 justify-content-center flex-column">
+ <section className="ags bg-transparent se p-4 w-100 justify-content-center flex-column">
       {/* header */}
                 <header className="ags__header vh-25 mb-4">
                   <div className="ags__agent-brand g-4">

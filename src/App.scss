@@ -4361,9 +4361,7 @@ font-size: 0.8rem !important;
   min-height: 100vh; /* full height */
   width: 100%;
   background:
-    radial-gradient(circle at 20% 20%, rgba(0, 0, 0, 0.04) 0 5px, transparent 6px) 0 0/48px 48px,
-    radial-gradient(circle at 80% 60%, rgba(0, 0, 0, 0.03) 0 5px, transparent 6px) 0 0/48px 48px,
-    var(--uae-bg);
+  transparent;
   display: flex;
   align-items: center;
   justify-content: center;

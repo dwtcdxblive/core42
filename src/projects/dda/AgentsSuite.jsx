@@ -77,7 +77,7 @@ const AgentsSuite = memo(function AgentsSuite() {
 
 
 
- <section className="ags py-4 w-100 d-flex justify-content-center" style={{paddingLeft:'0px',paddingRight:'0px'}}>
+ <section className="ags bg-transparent py-4 w-100 d-flex justify-content-center" style={{paddingLeft:'0px',paddingRight:'0px'}}>
 
   <div className="row w-100 g-4 justify-content-center align-items-stretch row-cols-1 row-cols-md-3 row-cols-lg-3" >
      

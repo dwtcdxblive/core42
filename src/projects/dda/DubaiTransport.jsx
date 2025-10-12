@@ -34,7 +34,7 @@ const activitiesAr = [
   { strong: "تعرف على مواعيد المواصلات العامة" },
 ];
   return (
-    <section className=" se">
+    <section className=" se bg-transparent">
       <div className="dn__card se__card   vh-100">
   
    <header className="se__header">

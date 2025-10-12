@@ -39,7 +39,7 @@ const headSection_ar = {
 
 
   return (
-    <main className="min-vh-100 d-flex align-items-start  ">
+    <main className="min-vh-100 d-flex bg-transparent align-items-start  ">
       <div className="container py-5">
         {/* logo */}
         <div className="col-12 col-md-3 text-md-start text-start mb-3 mb-md-0 my-5 w-100 d-flex justify-content-between align-items-center ">

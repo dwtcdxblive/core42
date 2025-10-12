@@ -7,7 +7,7 @@ import { RedirectBase } from "./RedirectBase";
 import secondLogo from "../../assets/secondLogo.png";
 export default function JusticeInDubai() {
   return (
-    <section className="trade trade--justice">
+    <section className="trade  bg-transparent trade--justice">
       <div className="trade__frame">
         {/* top-left government mark */}
         <img className="trade__gov" src={GovDubai} alt="Government of Dubai" />

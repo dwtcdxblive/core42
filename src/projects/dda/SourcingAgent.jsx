@@ -25,8 +25,8 @@ const titleAr= "وكلاء التوريد";
 const sectionTitleEn= "Project / Product Description";
 const sectionTitleAr= "وصف المشروع / المنتج";
   return (
-    <section className="se vh-100">
-      <div className="se__card   vh-100">
+    <section className="se vh-100 bg-transparent">
+      <div className="se__card border-none  vh-100">
         {/* Header / Logo */}
         <header className="se__header h-25 ">
      
