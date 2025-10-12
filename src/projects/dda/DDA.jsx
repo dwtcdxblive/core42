@@ -30,6 +30,10 @@ import CoPilotBg from "./BG/CoPilotBg.jsx"
 import InfrostructureBg from "./BG/InfrostructureBg.jsx"
 import AiAgent from "./BG/AiAgentBg.jsx"
 import AiAgentBg from "./BG/AiAgentBg.jsx"
+import BuildDubaiBg from "./BG/BuildDubaiBg.jsx"
+import TradeDubaiBg from "./BG/TradeDubaiBg.jsx"
+import JusticeDubaiBg from "./BG/JusticeDubaiBg.jsx"
+import InvestBg from "./BG/InvestBg.jsx"
 const DDA = () => {
   return (
 <div className="position-relative min-vh-100">
@@ -67,11 +71,14 @@ const DDA = () => {
       <Route path="CoPilotBg" element={<CoPilotBg />} />
       <Route path="InfrostructureBg" element={<InfrostructureBg />} />
       <Route path="AiAgentBg" element={<AiAgentBg />} />
+      <Route path="JusticeDubaiBg" element={<JusticeDubaiBg />} />
+
+   <Route path="InvestBg" element={<InvestBg />} />
 
 
 
-
-
+     <Route path="BuildtBg" element={<BuildDubaiBg />} />
+      <Route path="TradeDubaiBg" element={<TradeDubaiBg />} />
 
 
       
