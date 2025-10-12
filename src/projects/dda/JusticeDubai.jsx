@@ -72,7 +72,7 @@ const activitiesAr = [
             </div>
             <ul className="list-unstyled fw-semibold blue-font mb-0 font-GothamMedium fs-3">
               {activitiesEn.map((item,index) => <li   key={index}>
-                      <strong>{item.strong} </strong>
+                      - <strong>{item.strong} </strong>
                       
                       {item.normal}</li>)}
             </ul>
@@ -103,7 +103,7 @@ const activitiesAr = [
             </div>
             <ul className="list-unstyled fw-semibold blue-font mb-0 text-end font-GE_SSMedium fs-3">
               {activitiesAr.map((item,index) => <li   key={index}>
-                      <strong>{item.strong} </strong>
+                      - <strong>{item.strong} </strong>
                       
                       {item.normal}</li>)}
             </ul>
