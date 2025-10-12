@@ -4342,3 +4342,105 @@ font-size: 0.8rem !important;
 .h-15vh{
   height: 15vh !important;
 }
+
+// PASS
+/* uaepass.scss */
+/* src/pages/uaepass.scss */
+
+/* Brand Colors */
+:root {
+  --uae-green: #009c64;
+  --uae-green-dark: #0b5b3b;
+  --uae-gold: #bda644;
+  --uae-bg: #eff0f3;
+  --uae-white: #ffffff;
+}
+
+/* Section */
+.uaepass {
+  min-height: 100vh; /* full height */
+  width: 100%;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(0, 0, 0, 0.04) 0 5px, transparent 6px) 0 0/48px 48px,
+    radial-gradient(circle at 80% 60%, rgba(0, 0, 0, 0.03) 0 5px, transparent 6px) 0 0/48px 48px,
+    var(--uae-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0;
+
+  &__sheet {
+    max-width: 750px;
+  }
+
+  /* Feature Cards */
+  &__feature {
+
+    transition: transform 0.25s ease;
+    img {
+      width: 100%;
+      border-radius: 10px;
+      height: 100%;
+    }
+    &:hover {
+      transform: translateY(-4px);
+    }
+  }
+  &__feature {
+    // background-color: var(--uae-green);
+    // border-radius: 14px;
+    // height: 200px; /* ✅ fixed height for all cards */
+   
+ 
+    
+
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      border-radius: 10px;
+    }
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+    }
+
+
+  }
+
+  /* QR */
+  &__qr {
+    img {
+      width: 140px;
+      height: auto;
+      transition: transform 0.3s ease;
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  /* Sponsors */
+  &__logo {
+    max-width: 620px;
+    width: 100%;
+    margin-top: 2rem;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .uaepass {
+    padding: 20px 0;
+    &__sheet {
+      max-width: 90%;
+    }
+    &__qr img {
+      width: 120px;
+    }
+  }
+}
+
