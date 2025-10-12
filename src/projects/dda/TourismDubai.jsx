@@ -23,8 +23,18 @@ const activitiesAr = [
   { strong: "تجربة دبي" },
   { strong: "ابق على تواصل مع دبي" },
 ];
-const headSection_en = "DIGITAL CITY EXPERIENCES COVERING 21 SERVICES FOR MORE THAN 7 ENTITIES";
-const headSection_ar = "تجارب المدينة الرقمية تغطي أكثر من 21 خدمة لأكثر من 7 جهات";
+
+
+
+const headSection_en = {
+  num1: "DIGITAL CITY EXPERIENCES COVERING 21",
+  num2: "FOR MORE THAN 7 ENTITIES"
+};
+
+const headSection_ar = {
+  num1: "تجارب المدينة الرقمية تغطي أكثر من 21 خدمة",
+  num2: "لأكثر من 7 جهات"
+};
 const pageTitle_en = "THE OFFICIAL PLATFORM FOR TOURISM IN DUBAI.";
 const pageTitle_ar = "المنصة الرسمية للسياحة في دبي";
 
@@ -52,15 +62,15 @@ const pageTitle_ar = "المنصة الرسمية للسياحة في دبي";
         </div>
 
         {/* Main Row */}
-        <div className="row align-items-start bg-gray rounded-1  justify-content-center gy-4 mt-5">
+        <div className="row align-items-start bg-white    rounded-1  justify-content-center gy-4 mt-5">
           {/* Left English Block */}
           <div className="col-12 col-md-5">
             <div className="blue-font-bg text-white rounded-3 p-2 mb-3 fw-bold font-GothamMedium fs-5" style={{height:'7vh'}}>
-          {headSection_en}
+        {headSection_en.num1} <br/>{headSection_en.num2}
             </div>
             <ul className="list-unstyled fw-semibold blue-font mb-0 font-GothamMedium fs-3">
               {activitiesEn.map((item,index) => <li   key={index}>
-                      <strong>{item.strong} </strong>
+                      - <strong>{item.strong} </strong>
                       
                       </li>)}
             </ul>
@@ -87,11 +97,11 @@ const pageTitle_ar = "المنصة الرسمية للسياحة في دبي";
       
 
 
-                     {headSection_ar}
+                      {headSection_ar.num1} <br/>{headSection_ar.num2}
             </div>
             <ul className="list-unstyled fw-semibold blue-font mb-0 text-end font-GE_SSMedium fs-3">
               {activitiesAr.map((item,index) => <li   key={index}>
-                      <strong>{item.strong} </strong>
+                      - <strong>{item.strong} </strong>
                       
                       </li>)}
             </ul>

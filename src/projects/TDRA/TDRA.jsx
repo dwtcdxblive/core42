@@ -163,7 +163,7 @@ export default function TDRA() {
                     value={searchTerm}
                   />
                   <button
-                    className="btn btn-outline-secondary border-0 bg-white"
+                    className="btn btn-outline-secondary border-0 bg-white  "
                     type="button"
                     id="button-addon2"
                   >

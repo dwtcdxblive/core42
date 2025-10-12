@@ -58,7 +58,7 @@ const activitiesAr = [
         </div>
 
         {/* Main Row */}
-        <div className="row align-items-start bg-gray rounded-1  justify-content-center gy-4 mt-5">
+        <div className="row align-items-start bg-white  rounded-1  justify-content-center gy-4 mt-5">
           {/* Left English Block */}
           <div className="col-12 col-md-5">
             <div className="blue-font-bg text-white rounded-3 p-2 mb-3 fw-bold font-GothamMedium fs-5" style={{height:'7vh'}}>
