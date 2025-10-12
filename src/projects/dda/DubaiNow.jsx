@@ -124,7 +124,7 @@ const cta_ar = "جرب الآن";
     align-content-start  pb-4">
                     {dubaiNowItems.map(i => (
               <li style={{minHeight: 'unset'}} key={i.slug}>{i.strong}
-                <Link className="dn__link"   style={{ textDecoration: 'none', color: 'inherit' }} to={`/projects/dda/dubai-now/${i.slug}`}>{i.en}</Link>
+                <Link className="dn__link"   style={{ textDecoration: 'none', color: 'inherit' }} to={`/projects/dda/dubai-now/${i.slug_en}`}>{i.en}</Link>
               </li>
             ))}
         
@@ -136,7 +136,7 @@ const cta_ar = "جرب الآن";
     align-content-start  pb-4 font-dda_ar fs-6">
                   {dubaiNowItems.map(i => (
               <li style={{minHeight: 'unset'}} key={i.slug}>
-                <Link className="dn__link" style={{ textDecoration: 'none', color: 'inherit' }} to={`/projects/dda/dubai-now/${i.slug}`} dir="rtl">{i.ar}</Link>
+                <Link className="dn__link" style={{ textDecoration: 'none', color: 'inherit' }} to={`/projects/dda/dubai-now/${i.slug_ar}`} dir="rtl">{i.ar}</Link>
               </li>
             ))}
           </ul>
