@@ -35,16 +35,18 @@ export default function DubaiNowDetail() {
             <span className="se__btn-en ">VOLUNTEER</span>
           </button>
         </div>
+    
         {/* Replace this box with your real player when ready */}
         <div className="dn-detail__video h-30vh">
        
-          {item.videoSrc ? (
+          {item.videoSrc_en ? (
             <iframe
               src={detectSlugLanguage(slug)=='ar'? item.videoSrc_ar:item.videoSrc_en }
               title={item.en}
-              frameBorder="0"
-              allow="autoplay; encrypted-media; picture-in-picture"
-              allowFullScreen
+           
+             
+                referrerPolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+  style={{ width: '100%', aspectRatio: '16/9', border: 'none' ,backgroundColor:'transparent' }}
             />
           ) : (
             <div className="dn-detail__video-box">VIDEO WILL BE INSERTED HERE</div>
