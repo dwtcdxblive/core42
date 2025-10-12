@@ -14,9 +14,9 @@ import PartnerInveniam from "../../assets/Inveniam.svg"
 import PartnerAirev from "../../assets/Airev.svg"
 
 const partnerTiles = [
-  { title: "World Wide Technology", logo: PartnerWWT },
+  // { title: "World Wide Technology", logo: PartnerWWT },
   { title: "AMD", logo: PartnerAMD },
-  { title: "Red Hat", logo: PartnerRedHat },
+  // { title: "Red Hat", logo: PartnerRedHat },
   { title: "NVIDIA", logo: PartnerNvidia },
   { title: "softserve", logo: PartnerSoftServe },
   { title: "Inveniam", logo: PartnerInveniam },

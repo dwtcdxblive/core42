@@ -1,47 +1,66 @@
-import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import React, { useEffect, useRef } from 'react';
+import { Modal } from 'bootstrap';
 
-const ServiceDetailsModal = ({
+export default function ServiceDetailsModal({
   show,
   onHide,
-  serviceName,
-  costSaved,
-  timeSaved,
-  co2Reduced,
-}) => {
+  serviceName = 'Service Details',
+  costSaved = 0,
+  timeSaved = 0,
+  co2Reduced = 0,
+}) {
+  const modalRef = useRef(null);
+  const instanceRef = useRef(null);
+
+  const fmt = (n) => (Number(n) || 0).toLocaleString();
+
+  useEffect(() => {
+    if (!modalRef.current) return;
+    if (!instanceRef.current) {
+      instanceRef.current = new Modal(modalRef.current, {
+        backdrop: true,
+        focus: true,
+        keyboard: true,
+      });
+      modalRef.current.addEventListener('hidden.bs.modal', () => onHide?.());
+    }
+    show ? instanceRef.current.show() : instanceRef.current.hide();
+  }, [show, onHide]);
+
   return (
     <div
-      className={`modal fade ${show ? 'show' : ''}`}
-      tabIndex='-1'
-      style={{ display: show ? 'block' : 'none' }}
+      ref={modalRef}
+      className="modal fade"
+      tabIndex="-1"
+      aria-labelledby="serviceDetailsLabel"
+      aria-hidden="true"
     >
-      <div className='modal-dialog'>
-        <div className='modal-content'>
-          <div className='modal-header'>
-            <h5 className='modal-title'>{serviceName} Details</h5>
-            <button
-              type='button'
-              className='btn-close'
-              onClick={onHide}
-            ></button>
+      <div className="modal-dialog modal-dialog-centered">
+        <div className="modal-content">
+          <div className="modal-header">
+            <h1 className="modal-title fs-5" id="serviceDetailsLabel">
+              {serviceName} Details
+            </h1>
+            <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" />
           </div>
-          <div className='modal-body'>
-            <p>
-              <strong>Cost Saved:</strong> {costSaved} AED
-            </p>
-            <p>
-              <strong>Time Saved:</strong> {timeSaved} Hours
-            </p>
-            <p>
-              <strong>CO2 Reduced:</strong> {co2Reduced} Tonnes
-            </p>
+
+          <div className="modal-body">
+            <div className="metric-card mb-3">
+              <div className="metric-value">{fmt(costSaved)} AED</div>
+              <p className="metric-label">Cost Saved</p>
+            </div>
+            <div className="metric-card mb-3">
+              <div className="metric-value">{fmt(timeSaved)} Hours</div>
+              <p className="metric-label">Time Saved</p>
+            </div>
+            <div className="metric-card">
+              <div className="metric-value">{fmt(co2Reduced)} KGs</div>
+              <p className="metric-label">CO2 Reduced</p>
+            </div>
           </div>
-          <div className='modal-footer'>
-            <button
-              type='button'
-              className='btn btn-secondary'
-              onClick={onHide}
-            >
+
+          <div className="modal-footer justify-content-end">
+            <button type="button" className="btn btn-primary" data-bs-dismiss="modal">
               Close
             </button>
           </div>
@@ -49,6 +68,4 @@ const ServiceDetailsModal = ({
       </div>
     </div>
   );
-};
-
-export default ServiceDetailsModal;
+}

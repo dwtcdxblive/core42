@@ -62,7 +62,6 @@ function toNumber(val) {
   if (typeof val === 'number') return isFinite(val) ? val : 0;
 
   const s = String(val).replace(/[, ]/g, '');
-  // Match "2.5M", "800K", "2500"
   const m = s.match(/^(-?\d*\.?\d+)([KkMm])?$/);
   if (m) {
     let n = parseFloat(m[1]);
@@ -125,7 +124,6 @@ export default function TDRA() {
     'DigitalGovernmentFileshare',
   ];
 
-  // Fetch entities
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -143,8 +141,8 @@ export default function TDRA() {
 
             if (entity[usingKey]) {
               adoptedServices.push({
-                serviceKey: service,                      // backend key
-                serviceName: displayServiceName(service), // UI label
+                serviceKey: service,
+                serviceName: displayServiceName(service),
                 costSaved: toNumber(entity[costKey]),
                 timeSaved: toNumber(entity[timeKey]),
                 co2Reduced: toNumber(entity[co2Key]),
@@ -154,7 +152,6 @@ export default function TDRA() {
             }
           });
 
-          // Compute totals dynamically across adopted services
           const totalCostSaved = adoptedServices.reduce((sum, s) => sum + toNumber(s.costSaved), 0);
           const totalTimeSavedGov = adoptedServices.reduce((sum, s) => sum + toNumber(s.timeSaved), 0);
           const totalCo2Reduced = adoptedServices.reduce((sum, s) => sum + toNumber(s.co2Reduced), 0);
@@ -179,14 +176,12 @@ export default function TDRA() {
     fetchData();
   }, []);
 
-  // Filter by name
   const filteredItems = items.filter(
     (item) =>
       item.EntityName &&
       item.EntityName.toLowerCase().includes((searchTerm || '').toLowerCase())
   );
 
-  // Close dropdown on outside click
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
@@ -201,7 +196,6 @@ export default function TDRA() {
     if (dropdownRef.current) dropdownRef.current.classList.add('show');
   };
 
-  // Also show dropdown while typing
   useEffect(() => {
     if (!dropdownRef.current) return;
     if ((searchTerm || '').trim().length > 0) {
@@ -222,7 +216,7 @@ export default function TDRA() {
       type="button"
       className="modal-btn d-flex justify-content-around align-items-center p-2 drk-bg"
       data-bs-toggle="modal"
-      data-bs-target="#exampleModal"
+      data-bs-target="#overallImpactModal"
     >
       <img src={Rise} className="btn-icon" alt="Rise" />
       <span>Overall impact</span>
@@ -282,53 +276,6 @@ export default function TDRA() {
 
             {!selectedEntity && renderOverallImpactButton()}
 
-            {/* Overall impact modal (static example UI—replace with real overall totals if needed) */}
-            <div
-              className="modal fade"
-              id="exampleModal"
-              tabIndex="-1"
-              aria-labelledby="exampleModalLabel"
-              aria-hidden="true"
-            >
-              <div className="modal-dialog">
-                <div className="modal-content">
-                  <div className="modal-header">
-                    <h1 className="modal-title fs-5" id="exampleModalLabel">Overall impact</h1>
-                    <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div className="modal-body">
-                    <div className="card w-100 my-2">
-                      <div className="card-body my-2">
-                        <h5 className="card-title text-center">6/20</h5>
-                        <h6 className="card-subtitle text-center mb-2 text-body-secondary">Services Adopted</h6>
-                      </div>
-                    </div>
-                    <div className="card w-100 my-2">
-                      <div className="card-body">
-                        <h5 className="card-title text-center">2.6M AED</h5>
-                        <h6 className="card-subtitle text-center mb-2 text-body-secondary">Cost Saved</h6>
-                      </div>
-                    </div>
-                    <div className="card w-100 my-2">
-                      <div className="card-body">
-                        <h5 className="card-title text-center">8,000H</h5>
-                        <h6 className="card-subtitle text-center mb-2 text-body-secondary">Time saved</h6>
-                      </div>
-                    </div>
-                    <div className="card w-100 my-2">
-                      <div className="card-body">
-                        <h5 className="card-title text-center">5.3T</h5>
-                        <h6 className="card-subtitle text-center mb-2 text-body-secondary">Co2 reduced</h6>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="modal-footer">
-                    <button type="button" className="btn btn-primary" data-bs-dismiss="modal">Close</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-
             {/* Selected entity renders below */}
             <div className="w-100 mt-3">
               {selectedEntity ? (
@@ -339,8 +286,8 @@ export default function TDRA() {
                   totalTimeSavedGov={selectedEntity.totalTimeSavedGov}
                   totalCo2Reduced={selectedEntity.totalCo2Reduced}
                   totalServices={servicesList.length}
-                  adoptedServices={selectedEntity.adoptedServices}        // [{serviceKey, serviceName, costSaved, timeSaved, co2Reduced}]
-                  notAdoptedServices={selectedEntity.notAdoptedServices} // [displayName,...]
+                  adoptedServices={selectedEntity.adoptedServices}
+                  notAdoptedServices={selectedEntity.notAdoptedServices}
                 />
               ) : (
                 <div className="text-center text-muted">
@@ -351,6 +298,56 @@ export default function TDRA() {
           </div>
         </div>
       </div>
+
+      {/* ===== Bootstrap Modal at root-level to avoid z-index issues ===== */}
+      <div
+        className="modal fade"
+        id="overallImpactModal"
+        tabIndex="-1"
+        aria-labelledby="overallImpactModalLabel"
+        aria-hidden="true"
+        // keep this higher than any page element; backdrop is 1050, modal is 1055 by default.
+        style={{ zIndex: 1070 }}
+      >
+        <div className="modal-dialog modal-dialog-centered">
+          <div className="modal-content">
+            <div className="modal-header">
+              <h1 className="modal-title fs-5" id="overallImpactModalLabel">Overall impact</h1>
+              <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div className="modal-body">
+              <div className="card w-100 my-2">
+                <div className="card-body my-2">
+                  <h5 className="card-title text-center">6/20</h5>
+                  <h6 className="card-subtitle text-center mb-2 text-body-secondary">Services Adopted</h6>
+                </div>
+              </div>
+              <div className="card w-100 my-2">
+                <div className="card-body">
+                  <h5 className="card-title text-center">2.6M AED</h5>
+                  <h6 className="card-subtitle text-center mb-2 text-body-secondary">Cost Saved</h6>
+                </div>
+              </div>
+              <div className="card w-100 my-2">
+                <div className="card-body">
+                  <h5 className="card-title text-center">8,000H</h5>
+                  <h6 className="card-subtitle text-center mb-2 text-body-secondary">Time saved</h6>
+                </div>
+              </div>
+              <div className="card w-100 my-2">
+                <div className="card-body">
+                  <h5 className="card-title text-center">5.3T</h5>
+                  <h6 className="card-subtitle text-center mb-2 text-body-secondary">CO₂ reduced</h6>
+                </div>
+              </div>
+            </div>
+            <div className="modal-footer">
+              <button type="button" className="btn btn-primary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* ================================================================== */}
     </div>
   );
 }

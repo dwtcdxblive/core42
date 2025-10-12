@@ -19,6 +19,7 @@ import G42 from "./projects/G42/G42.jsx"
 import DDA from "./projects/dda/DDA.jsx"
 
 import "./App.scss"
+import C42CoLocation from "./projects/core42/C42CoLocation.jsx"
 
 const projects = [
   {
@@ -149,6 +150,7 @@ function App() {
         <Route path="/projects/core42/products/signature-cloud" element={<PageTransition><C42SignatureCloud /></PageTransition>} />
         <Route path="/projects/core42/products/oracle-fusion" element={<PageTransition><C42OracleFusion /></PageTransition>} />
         <Route path="/projects/core42/products/delivery-services" element={<PageTransition><C42DeliveryServices /></PageTransition>} />
+        <Route path="/projects/core42/products/co-location" element={<PageTransition><C42CoLocation/></PageTransition>}/>
         <Route path="/projects/core42/brand" element={<PageTransition><C42Brand /></PageTransition>} />
         <Route path="/projects/core42/partners" element={<PageTransition><C42Partners /></PageTransition>} />
         <Route path="/projects/core42/contact" element={<PageTransition><C42Contact /></PageTransition>} />
