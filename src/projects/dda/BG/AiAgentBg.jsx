@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import AI1 from "../../../assets/bgDDA/AI1.svg";
 import AI2 from "../../../assets/bgDDA/AI2.svg";
 import AI3 from "../../../assets/bgDDA/AI3.svg";
-
+import { RedirectBase } from "../RedirectBase";
 const AiAgentBg = () => {
   const imageList = [
     { src: AI1, link: "" },
@@ -23,7 +23,7 @@ const AiAgentBg = () => {
             >
               <img
                 src={item.src}
-                alt={`AI-${index + 1}`}
+                alt={`AI-${index + 1}`} onClick={() => window.open(item.link, "_blank")}  
                 className="img-fluid rounded shadow-sm"
                 style={{ width: "100%", height: "auto" }}
               />
