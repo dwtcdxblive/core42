@@ -1,10 +1,11 @@
 import { memo } from "react";
 import { Link } from "react-router-dom";
 import GovDubai from "../../assets/dubai-gov.png";
-import rtaLogo from "../../assets/rtaLogo.svg";
+import transportLogos from "../../assets/transportLogos.png";
 import transportQr from "../../assets/transportQr.png";
 import { dubaiNowItems } from "./DubaiNowData";
 import { RedirectBase } from "./RedirectBase";
+import secondLogo from "../../assets/secondLogo.png";
 
 const DubaiTransport = memo(function DubaiTransport() {
   // split EN/AR columns evenly
@@ -38,17 +39,22 @@ const activitiesAr = [
   
    <header className="se__header">
       {/* Top Row: logo left */}
-      <div className="d-flex align-items-start justify-content-between w-100">
-        <div className="se__brand d-flex align-items-center gap-2">
-          <img
-            className="se__logo"
-            src={GovDubai}
-            alt="Government of Dubai"
-            style={{ height: "70px", width: "auto" }}
-          />
-         
-        </div>
-      </div>
+         <div className="d-flex align-items-start justify-content-between w-100 pb-2">
+           <div className="se__brand d-flex align-items-center justify-content-between gap-2 w-100">
+             <img
+               className="se__logo"
+               src={GovDubai}
+               alt="Government of Dubai"
+               style={{ height: "50px", width: "auto" }}
+             />
+              <img
+               className="se__logo"
+               src={secondLogo}
+               alt="Government of Dubai"
+               style={{ height: "50px", width: "auto" }}
+             />
+           </div>
+         </div>
 
       {/* Centered Titles */}
       <div className="text-center mt-4">
@@ -87,7 +93,7 @@ const activitiesAr = [
           </ul>
            </div>
            {/* CTA */}
-            <div onClick={() => window.open(RedirectBase.DubaiTransport.link, "_blank")} className="se__cta  position-absolute   start-50 translate-middle-x d-flex flex-column justify-content-center align-items-center g-4" style={{bottom:'0px'}}>
+            <div onClick={() => window.open(RedirectBase.DubaiTransport.link, "_blank")} className="se__cta cursor-pointer position-absolute   start-50 translate-middle-x d-flex flex-column justify-content-center align-items-center g-4" style={{bottom:'0px'}}>
                  <img className="dn__qr" src={transportQr} alt="QR" />
             
             </div>
@@ -96,7 +102,7 @@ const activitiesAr = [
    
 
         <footer className="dn__logo">
-          <img src={rtaLogo}  width='160px' alt="Dubai Now partners" />
+          <img src={transportLogos}  width='160px' alt="Dubai Now partners" />
         </footer>
       </div>
     </section>

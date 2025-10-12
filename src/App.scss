@@ -18,7 +18,7 @@
 
 /* Utility for bilingual title styling */
 .font-title {
-  font-family: "GothamMedium", sans-serif;
+ font-family: "GESSMedium", sans-serif !important;
   font-weight: 500;
   letter-spacing: 0.02em;
 }
@@ -26,10 +26,10 @@
 /* Automatically switch to Arabic font when direction or lang indicates Arabic */
 .font-title[dir="rtl"],
 .font-title:lang(ar) {
-  font-family: "GESSMedium", sans-serif;
+ font-family: "GESSMedium", sans-serif !important;
 }
 .font-dda_ar {
-  font-family: "GESSMedium", sans-serif !important;
+  font-family: "IBM Plex Sans", sans-serif !important;
 }
 * {
   margin: 0;
@@ -2040,7 +2040,7 @@ position: relative;
 }
 
 .dda-trade__feature-card li::before {
-  content: "ï¿½";
+  // content: "ï¿½";
   position: absolute;
   left: 0;
   color: #8dd0ff;
@@ -2655,7 +2655,7 @@ text-align: center;
 
     /* keep the dash bullet */
     &::before {
-      content: "-";
+      // content: "-";
       position: absolute;
       left: 0;
       top: 0;
@@ -2712,7 +2712,7 @@ text-align: center;
     color: #fff;
     border: 1px solid var(--blue-900);
     font-weight: 700;
-    cursor: pointer;
+  cursor: pointer;
     box-shadow: 0 6px 14px var(--blue-900);
     transition: transform .08s ease, box-shadow .2s ease;
 
@@ -3386,7 +3386,7 @@ text-align: center;
     color: #153255;
 
     &::before {
-      content: "-";
+      // content: "-";
       position: absolute;
       left: 0;
       top: 0;
@@ -3703,7 +3703,7 @@ text-align: center;
       min-height: 38px;
 
       &::before {
-        content: "-";
+        // content: "-";
         position: absolute;
         left: 0; top: 0;
         color: var(--blue-700);
@@ -3880,7 +3880,7 @@ text-align: center;
 
 .dn__list--en li::before,
 .dn__list--ar li::after {
-  content: "â€“";
+  // content: "â€“";
   color: #1c4aa8;
   font-weight: 700;
   margin: 0 8px;
@@ -4034,6 +4034,8 @@ text-align: center;
 
   .dn__logos {
     margin-top: 0px;
+    background-color: white;
+    width: 100%;
   }
 }
 

@@ -1,7 +1,7 @@
 import { memo } from "react";
 
 
-
+import secondLogo from "../../assets/secondLogo.png";
 
 
 const sectionTitleEn = "RECRUITMENT AGENTS";
@@ -128,7 +128,7 @@ const Infostructure = memo(function Infostructure() {
         {/* CTA */}
                   <div className="ags__cta py-3 h-unset d-flex justify-content-center align-item-center" >
                     {/* onClick={() => window.open(RedirectBase.ProductCopilot.link, "_blank")} */}
-                    <button type="button" className="ags__btn "  style={{height:'auto' ,width:'360px'}} >
+                    <button type="button" className="ags__btn cursor-pointer"  style={{height:'auto' ,width:'360px'}} >
                       <span className="ags__btn-ar font-dda_ar fs-1 ">جرّب الآن</span>
                       <span className="ags__btn-en fs-1  ">EXPLORE</span>
                     </button>

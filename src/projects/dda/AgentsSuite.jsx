@@ -1,5 +1,6 @@
 import { memo } from "react";
 import { RedirectBase } from "./RedirectBase";
+import secondLogo from "../../assets/secondLogo.png";
 const cards = [
   {
     key: "recruitment",
@@ -112,7 +113,7 @@ const AgentsSuite = memo(function AgentsSuite() {
                     <div className="ags__roles">
                     <ul className="ags__list ags__list--en  pb-4">
                         {c.activitiesEn.map((item) => <li className="fs-4" key={item}>
-                                <strong>{item.strong} </strong>
+                              -  <strong>{item.strong} </strong>
                                 
                                 {item.normal}</li>)}
                   
@@ -120,15 +121,15 @@ const AgentsSuite = memo(function AgentsSuite() {
 
                     <span className="ags__divider ags__divider--roles" aria-hidden="true" />
 
-                    <ul className="ags__list se__list--ar  pb-4 font-dda_ar fs-6">
+                    <ul className="ags__list se__list--ar  pb-4 font-dda_ar fs-6" style={{direction:'rtl'}}>
                       {c.activitiesAr.map((item) => <li className="fs-4"  key={item}>
-                                <strong>{item.strong} </strong>
+                              -  <strong>{item.strong} </strong>
                                 
                                 {item.normal}</li>)}
                     </ul>
                     </div>
                     {/* CTA */}
-                  <div onClick={() => window.open(RedirectBase.AgentsSuite.link, "_blank")}className="ags__cta  position-absolute  start-50 translate-middle-x" style={{bottom:'10px'}}>
+                  <div onClick={() => window.open(RedirectBase.AgentsSuite.link, "_blank")}className="ags__cta cursor-pointer  position-absolute  start-50 translate-middle-x" style={{bottom:'10px'}}>
                     <button type="button" className="ags__btn ">
                       <span className="ags__btn-ar font-dda_ar ">جرّب الآن</span>
                       <span className="ags__btn-en ">EXPLORE</span>
