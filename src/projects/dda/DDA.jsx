@@ -24,6 +24,12 @@ import BuildDubai from "./buildDubai.jsx"
 import VideoBackground from "./VideoBackground.jsx"
 import Infostructure from "./Infostructure.jsx"
 import UAEPass from "./UAEPass.jsx"
+import TourismDubaiBg from "./BG/TourismDubaiBg.jsx"
+import AicomiteeBg from "./BG/AicomiteeBg.jsx"
+import CoPilotBg from "./BG/CoPilotBg.jsx"
+import InfrostructureBg from "./BG/InfrostructureBg.jsx"
+import AiAgent from "./BG/AiAgentBg.jsx"
+import AiAgentBg from "./BG/AiAgentBg.jsx"
 const DDA = () => {
   return (
 <div className="position-relative min-vh-100">
@@ -56,6 +62,16 @@ const DDA = () => {
       <Route path="dubai-transport" element={<DubaiTransport />} />
       <Route path="dubai-Infostructure" element={<Infostructure />} />
       <Route path="UAEPass" element={<UAEPass />} />
+      <Route path="TourismDubaiBG" element={<TourismDubaiBg />} />
+      <Route path="AicomiteeBg" element={<AicomiteeBg />} />
+      <Route path="CoPilotBg" element={<CoPilotBg />} />
+      <Route path="InfrostructureBg" element={<InfrostructureBg />} />
+      <Route path="AiAgentBg" element={<AiAgentBg />} />
+
+
+
+
+
 
 
       
