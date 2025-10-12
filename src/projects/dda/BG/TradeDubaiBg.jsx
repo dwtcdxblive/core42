@@ -15,7 +15,7 @@ const TradeDubaiBg = () => {
   return (
     <main className="min-vh-100 d-flex align-items-start  ">
       <img onClick={() => window.open(RedirectBase.DubaiTrade.link, "_blank")} className="container py-5"     width='100%'
-    height='1080px' src={trade}/>
+    src={trade}/>
       
     
     </main>

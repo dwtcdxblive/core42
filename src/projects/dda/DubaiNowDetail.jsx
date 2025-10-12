@@ -5,9 +5,17 @@ import dubaiNowDetail from "../../assets/dubaiNowDetail.svg";
 
 
 export default function DubaiNowDetail() {
+
   const { slug } = useParams();
   const item = dubaiNowItems.find(x => x.slug === slug) || dubaiNowItems[0];
+   const detectSlugLanguage=(slug)=>{
+  if (typeof slug !== "string") return "en"; // default fallback
 
+  // Arabic Unicode range: \u0600–\u06FF
+  const arabicPattern = /[\u0600-\u06FF]/;
+
+  return arabicPattern.test(slug) ? "ar" : "en";
+}
   return (
     <section className="dn-detail">
       <div className="dn-detail__card h-100">
@@ -29,9 +37,10 @@ export default function DubaiNowDetail() {
         </div>
         {/* Replace this box with your real player when ready */}
         <div className="dn-detail__video h-30vh">
+       
           {item.videoSrc ? (
             <iframe
-              src={item.videoSrc}
+              src={detectSlugLanguage(slug)=='ar'? item.videoSrc_ar:item.videoSrc_en }
               title={item.en}
               frameBorder="0"
               allow="autoplay; encrypted-media; picture-in-picture"

@@ -5,7 +5,8 @@ export const dubaiNowItems = [
     slug_ar: 'التطوع',
     en: 'Volunteer',
     ar: 'التطوع',
-    videoSrc: '',
+    videoSrc_en: 'https://player.vimeo.com/video/1126585437?title=0&byline=0&portrait=0&badge=0&autopause=0&app_id=58479',
+    videoSrc_ar: 'https://player.vimeo.com/video/1126585556?title=0&byline=0&portrait=0&badge=0&autopause=0&app_id=58479',
   },
   {
     slug: 'domestic-workers',
@@ -13,8 +14,8 @@ export const dubaiNowItems = [
     slug_ar: 'العمالة-المنزلية',
     en: 'Domestic Workers',
     ar: 'العمالة المنزلية',
-    videoSrc:
-      'https://player.vimeo.com/video/1126221661?h=29587f9209&badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&muted=1&loop=1',
+    videoSrc_en: 'https://player.vimeo.com/video/1126583090?title=0&byline=0&portrait=0&badge=0&autopause=0&app_id=58479',
+    videoSrc_ar: 'https://player.vimeo.com/video/1126586137?title=0&byline=0&portrait=0&badge=0&autopause=0&app_id=58479',
   },
   {
     slug: 'marriage',
@@ -22,7 +23,8 @@ export const dubaiNowItems = [
     slug_ar: 'الزواج',
     en: 'Marriage',
     ar: 'الزواج',
-    videoSrc: '',
+    videoSrc_en: 'https://player.vimeo.com/video/1126583160?title=0&byline=0&portrait=0&badge=0&autopause=0&app_id=58479',
+    videoSrc_ar: 'https://player.vimeo.com/video/1126583302?title=0&byline=0&portrait=0&badge=0&autopause=0&app_id=58479',
   },
   {
     slug: 'rent-a-home',
@@ -30,7 +32,8 @@ export const dubaiNowItems = [
     slug_ar: 'استئجار-منزل',
     en: 'Rent a Home',
     ar: 'استئجار منزل',
-    videoSrc: '',
+    videoSrc_en: 'https://player.vimeo.com/video/1126585875?title=0&byline=0&portrait=0&badge=0&autopause=0&app_id=58479',
+    videoSrc_ar: 'https://player.vimeo.com/video/1126585674?title=0&byline=0&portrait=0&badge=0&autopause=0&app_id=58479',
   },
   {
     slug: 'may-they-rest-in-peace',
@@ -38,7 +41,8 @@ export const dubaiNowItems = [
     slug_ar: 'إكرام-الموتى',
     en: 'May They Rest In Peace',
     ar: 'إكرام الموتى',
-    videoSrc: '',
+    videoSrc_en: 'https://player.vimeo.com/video/1126579896?title=0&byline=0&portrait=0&badge=0&autopause=0&app_id=58479',
+    videoSrc_ar: 'https://player.vimeo.com/video/1126579974?title=0&byline=0&portrait=0&badge=0&autopause=0&app_id=58479',
   },
   {
     slug: 'obtain-medical-id',
@@ -46,7 +50,8 @@ export const dubaiNowItems = [
     slug_ar: 'الحصول-على-الهوية-الطبية',
     en: 'Obtain Medical ID',
     ar: 'الحصول على الهوية الطبية',
-    videoSrc: '',
+    videoSrc_en: 'https://player.vimeo.com/video/1126579878?title=0&byline=0&portrait=0&badge=0&autopause=0&app_id=58479',
+    videoSrc_ar: 'https://player.vimeo.com/video/1126579303?title=0&byline=0&portrait=0&badge=0&autopause=0&app_id=58479',
   },
   {
     slug: 'get-married',
@@ -54,7 +59,8 @@ export const dubaiNowItems = [
     slug_ar: 'عقد-الزواج',
     en: 'Get Married',
     ar: 'عقد الزواج',
-    videoSrc: '',
+    videoSrc_en: 'https://player.vimeo.com/video/1126583160?title=0&byline=0&portrait=0&badge=0&autopause=0&app_id=58479',
+    videoSrc_ar: 'https://player.vimeo.com/video/1126583302?title=0&byline=0&portrait=0&badge=0&autopause=0&app_id=58479',
   },
   {
     slug: 'get-family-house',
@@ -62,7 +68,8 @@ export const dubaiNowItems = [
     slug_ar: 'الحصول-على-سكن-عائلي',
     en: 'Get Family House',
     ar: 'الحصول على سكن عائلي',
-    videoSrc: '',
+    videoSrc_en: 'https://player.vimeo.com/video/1126583529?title=0&byline=0&portrait=0&badge=0&autopause=0&app_id=58479',
+    videoSrc_ar: 'https://player.vimeo.com/video/1126583675?title=0&byline=0&portrait=0&badge=0&autopause=0&app_id=58479',
   },
   {
     slug: 'land-exchange',
@@ -70,7 +77,8 @@ export const dubaiNowItems = [
     slug_ar: 'استبدال-الأراضي',
     en: 'Land Exchange',
     ar: 'استبدال الأراضي',
-    videoSrc: '',
+    videoSrc_en: 'https://player.vimeo.com/video/1126583471?title=0&byline=0&portrait=0&badge=0&autopause=0&app_id=58479',
+    videoSrc_ar: 'https://player.vimeo.com/video/1126583494?title=0&byline=0&portrait=0&badge=0&autopause=0&app_id=58479',
   },
   {
     slug: 'electric-vehicle',
@@ -78,7 +86,8 @@ export const dubaiNowItems = [
     slug_ar: 'مركبة-كهربائية',
     en: 'Electric Vehicle',
     ar: 'مركبة كهربائية',
-    videoSrc: '',
+    videoSrc_en: 'https://player.vimeo.com/video/1126583043?title=0&byline=0&portrait=0&badge=0&autopause=0&app_id=58479',
+    videoSrc_ar: 'https://player.vimeo.com/video/1126583068?title=0&byline=0&portrait=0&badge=0&autopause=0&app_id=58479',
   },
   {
     slug: 'buy-and-sell-property',
@@ -86,6 +95,7 @@ export const dubaiNowItems = [
     slug_ar: 'بيع-وشراء-العقارات',
     en: 'Buy and Sell Property',
     ar: 'بيع وشراء العقارات',
-    videoSrc: '',
+    videoSrc_en: 'https://player.vimeo.com/video/1126580169?title=0&byline=0&portrait=0&badge=0&autopause=0&app_id=58479',
+    videoSrc_ar: 'https://player.vimeo.com/video/1126580059?title=0&byline=0&portrait=0&badge=0&autopause=0&app_id=58479',
   },
 ];
