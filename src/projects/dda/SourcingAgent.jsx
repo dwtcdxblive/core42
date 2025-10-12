@@ -1,6 +1,7 @@
 
 import { memo } from "react";
 import { RedirectBase } from "./RedirectBase";
+import secondLogo from "../../assets/secondLogo.png";
 // LINK SOURCING AGENT EQUAL TO SMART SUPLIER 
 const SourcingAgent = memo(function SourcingAgent() {
   const activitiesEn= [
@@ -64,7 +65,7 @@ const sectionTitleAr= "وصف المشروع / المنتج";
            </div>
            {/* CTA */}
             <div className="se__cta  position-absolute  start-50 translate-middle-x" style={{bottom:'10px'}}>
-              <button type="button" className="se__btn  "onClick={() => window.open(RedirectBase.SmartSupplier.link, "_blank")}>
+              <button type="button" className="se__btn cursor-pointer  "onClick={() => window.open(RedirectBase.SmartSupplier.link, "_blank")}>
                 <span className="se__btn-ar font-dda_ar ">جرّب الآن</span>
                 <span className="se__btn-en ">EXPLORE</span>
               </button>

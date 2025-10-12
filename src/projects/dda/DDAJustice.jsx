@@ -4,6 +4,7 @@ import Explore from '../../assets/explore-btn.png';
 import EnTypo from '../../assets/justice-typo-en.png'
 import ArTypo from '../../assets/justice-typo-ar.png'
 import { RedirectBase } from "./RedirectBase";
+import secondLogo from "../../assets/secondLogo.png";
 export default function JusticeInDubai() {
   return (
     <section className="trade trade--justice">
@@ -34,7 +35,7 @@ export default function JusticeInDubai() {
               <li className="font-title">General Judicial Services and complaints</li>
             </ul>
           </article>
-        <div className="trade__cta" onClick={() => window.open(RedirectBase.ProductCopilot.link, "_blank")}>
+        <div className="trade__cta cursor-pointer" onClick={() => window.open(RedirectBase.ProductCopilot.link, "_blank")}>
             <a  
             href={RedirectBase.ProductCopilot.link}
             type="button" className="bg-transparent border-0 p-0 text-center text-decoration-none">

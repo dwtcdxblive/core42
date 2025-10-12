@@ -1,5 +1,6 @@
 import { memo } from "react";
 import { RedirectBase } from "./RedirectBase";
+import secondLogo from "../../assets/secondLogo.png";
 const cards = [
   {
     key: "copilot",
@@ -93,7 +94,7 @@ const ProductCopilot = memo(function ProductCopilot() {
                     </div>
                     {/* CTA */}
                   <div className="ags__cta py-3 h-unset d-flex justify-content-center align-item-center" >
-                    <button type="button" className="ags__btn "  style={{height:'auto' ,width:'260px'}} onClick={() => window.open(RedirectBase.ProductCopilot.link, "_blank")}>
+                    <button type="button" className="ags__btn cursor-pointer"  style={{height:'auto' ,width:'260px'}} onClick={() => window.open(RedirectBase.ProductCopilot.link, "_blank")}>
                       <span className="ags__btn-ar font-dda_ar fs-4 ">جرّب الآن</span>
                       <span className="ags__btn-en fs-4  ">EXPLORE</span>
                     </button>

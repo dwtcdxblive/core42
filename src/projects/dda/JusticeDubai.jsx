@@ -10,6 +10,7 @@ import qrInvest from "../../assets/qrInvest.png";
 import justiceSponsers from "../../assets/justiceSponsers.svg";
 import GovDubai from "../../assets/dubai-gov.png";
 import { RedirectBase } from "./RedirectBase";
+import secondLogo from "../../assets/secondLogo.png";
 const JusticeDubai = () => {
 
 
@@ -37,14 +38,20 @@ const activitiesAr = [
     <main className="min-vh-100 d-flex align-items-start  ">
       <div className="container py-5">
         {/* logo */}
-         <div className="col-12 col-md-3 text-md-start text-start mb-3 mb-md-0 my-5 ">
-          <img
-            src={GovDubai}
-            alt="Government of Dubai"
-            className="img-fluid mb-5"
-            style={{ height: "100px" }}
-          />
-          </div>
+      <div className="col-12 col-md-3 text-md-start text-start mb-3 mb-md-0 my-5 w-100 d-flex justify-content-between align-items-center ">
+               <img
+                 src={GovDubai}
+                 alt="Government of Dubai"
+                 className="img-fluid mb-5"
+                 style={{ height: "100px" }}
+               />
+                 <img
+                         className="img-fluid mb-5"
+                           src={secondLogo}
+                           alt="Government of Dubai"
+                           style={{ height: "50px", width: "auto" }}
+                         />
+               </div>
         {/* Header */}
         <div className="text-center mb-2 mt-1">
           
@@ -80,7 +87,7 @@ const activitiesAr = [
               style={{ maxWidth: "150px" }}
             /> */}
       
-           <div className="dark-blue-bg text-white rounded-3 fw-semibold py-2 px-4 mx-auto fs-3" onClick={() => window.open(RedirectBase.JusticeDubai.link, "_blank")}>
+           <div className="dark-blue-bg text-white rounded-3 fw-semibold py-2 px-4 mx-auto fs-3 cursor-pointer" onClick={() => window.open(RedirectBase.JusticeDubai.link, "_blank")}>
               <div className="text-uppercase font-GE_SSBold " >جرب الآن</div>
               <div className="text-uppercase font-GothamMedium">Explore</div>
             </div> 
