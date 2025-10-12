@@ -22,14 +22,14 @@ const DDALanding = () => {
           <Link className="dda-secondary-btn" to="sourcinagent">
             View Sourcing Agents
           </Link>
-     
+{/*      
        <Link className="dda-secondary-btn" to="productcopilot">
             View PRODUCT COPILOT & AI COMMITTEE
           </Link>
            <Link className="dda-secondary-btn" to="recruitment">
             View RECRUITMENT AGENTS
-          </Link>
-          <Link className="dda-secondary-btn" to="agents-suite">
+          </Link>  */}
+          {/* <Link className="dda-secondary-btn" to="agents-suite">
             Explore Agents Suite
           </Link>
           <Link className="dda-secondary-btn" to="trade">
@@ -40,7 +40,7 @@ const DDALanding = () => {
           </Link>
           <Link className="dda-secondary-btn" to="justice">
             View justice Showcase
-          </Link>
+          </Link> */}
           <Link className="dda-secondary-btn" to="codai">
             Open CODAI Experience
           </Link>
@@ -59,10 +59,11 @@ const DDALanding = () => {
           <a className="dda-secondary-btn" href="https://prod.shail.ae/wv/linking/" target="_blank" rel="noreferrer">
             View Production Reference
           </a>
+          <h1>DDA pages</h1>
           <Link className="dda-secondary-btn" to="dubai-now">
             View Dubai Now
           </Link>
-          <Link className="dda-secondary-btn" to="dubai-transport">
+          {/* <Link className="dda-secondary-btn" to="dubai-transport">
             View Dubai Transport
           </Link>
              <Link className="dda-secondary-btn" to="investDubai">
@@ -80,7 +81,7 @@ const DDALanding = () => {
           </Link>
              <Link className="dda-secondary-btn" to="buildDubai">
             View  build in  Dubai
-          </Link>
+          </Link> */}
                <Link className="dda-secondary-btn" to="UAEPass">
             View  UAEPass
           </Link>
@@ -118,6 +119,16 @@ const DDALanding = () => {
                   <Link className="dda-secondary-btn" to="AiAgentBg">
             View  AiAgentBg
           </Link>
+
+
+          
+              <Link className="dda-secondary-btn" to="DubaiTransportBg">
+            View  DubaiTransportBg
+          </Link>
+              <Link className="dda-secondary-btn" to="DubaiAiPhone">
+            View  DubaiAiPhone
+          </Link>
+          
         </div>
       </section>
     </main>

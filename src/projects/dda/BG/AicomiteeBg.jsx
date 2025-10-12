@@ -8,13 +8,13 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import aicomitee from "../../../assets/bgDDA/aicomitee.svg";
-
+// import { RedirectBase } from "../RedirectBase";
 const AicomiteeBg = () => {
-
+// onClick={() => window.open(RedirectBase.Aicomitee.link, "_blank")}  
 
   return (
     <main className="min-vh-100 d-flex align-items-center  ">
-      <img className="container "     width='100%'
+      <img className="container "  onClick={() => window.open(RedirectBase.Aicomitee.link, "_blank")}     width='100%'
     height='100%' src={aicomitee}/>
       
     

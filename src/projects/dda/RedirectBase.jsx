@@ -1,3 +1,5 @@
+
+
 export const RedirectBase = {
   // --- DDGE / Tunnel Left Side ---
   DubaiAI: { link: "dubaiNowQA://success" },
@@ -19,5 +21,6 @@ export const RedirectBase = {
   DubaiTransport: { link: "https://prod.shail.ae/wv/linking/" },
   DubaiBuild: { link: "https://www.buildindubai.gov.ae/" },
   DubaiJustice: { link: "waiting for video from Dubai Justice" },
+  Aicomitee: { link: "waiting for video from Dubai Justice" },
 };
 
