@@ -36,6 +36,7 @@ import JusticeDubaiBg from "./BG/JusticeDubaiBg.jsx"
 import InvestBg from "./BG/InvestBg.jsx"
 import DubaiTransportBg from "./BG/DubaiTransportBg.jsx"
 import DubaiSmartSuplier from "./BG/DubaiSmartSuplier.jsx"
+import DubaiSmartEmployee from "./BG/DubaiSmartEmployee.jsx"
 const DDA = () => {
   return (
 <div className="position-relative min-vh-100">
@@ -83,6 +84,8 @@ const DDA = () => {
       <Route path="TradeDubaiBg" element={<TradeDubaiBg />} />
       <Route path="DubaiTransportBg" element={<DubaiTransportBg />} />
       <Route path="DubaiSmartSuplier" element={<DubaiSmartSuplier />} />
+      <Route path="DubaiSmartEmployee" element={<DubaiSmartEmployee />} />
+
 
 
 
