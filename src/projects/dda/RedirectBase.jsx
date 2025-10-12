@@ -24,7 +24,7 @@ export const RedirectBase = {
   // dubai
   InvestInDubai: { link: "https://www.investindubai.gov.ae/" },
   VisitDubai: { link: "https://www.visitdubai.com/en" },
-    DubaiBuild: { link: "https://www.buildindubai.gov.ae/" },
+    DubaiBuild: { link: "buildindubai.gov.ae/" },
   DubaiJustice: { link: "waiting for video from Dubai Justice" },
     DubaiTrade: { link: "SW_Journey_gitex - Page 1" },
 };

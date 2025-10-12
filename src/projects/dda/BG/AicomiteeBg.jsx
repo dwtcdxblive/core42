@@ -7,8 +7,8 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import aicomitee from "../../../assets/bgDDA/aicomitee.svg";
-// import { RedirectBase } from "../RedirectBase";
+import aicomitee from "../../../assets/bgDDA/aiComite.png";
+import { RedirectBase } from "../RedirectBase";
 const AicomiteeBg = () => {
 // onClick={() => window.open(RedirectBase.Aicomitee.link, "_blank")}  
 

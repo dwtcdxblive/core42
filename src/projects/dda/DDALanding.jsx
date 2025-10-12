@@ -133,8 +133,8 @@ const DDALanding = () => {
               <Link className="dda-secondary-btn" to="DubaiTransportBg">
             View  DubaiTransportBg
           </Link>
-              <Link className="dda-secondary-btn" to="DubaiAiPhone">
-            View  DubaiAiPhone
+              <Link className="dda-secondary-btn" to="DubaiSmartSuplier">
+            View  Dubai Smart Suplier
           </Link>
           
         </div>

@@ -9,7 +9,10 @@ import secondLogo from "../../assets/secondLogo.png";
 import dubaiNowTitle from'../../assets/dubaiNowTitle.png';
 
 
-import transportQr from "../../assets/transportQr.png";
+
+import qrCode from "../../assets/dubaiNow/qrCode.png";
+import header from "../../assets/dubaiNow/header.png";
+
 import { RedirectBase } from "./RedirectBase";
 
 const DubaiNow = memo(function DubaiNow() {
@@ -79,37 +82,17 @@ const cta_ar = "جرب الآن";
 // }
   return (
     <section className=" se">
-      <div className="dn__card se__card   vh-100">
+      <div className="dn__card se__card   vh-100 border-0">
   
    <header className="se__header">
       {/* Top Row: logo left */}
       <div className="d-flex align-items-start justify-content-between w-100 pb-2">
-        <div className="se__brand d-flex align-items-center justify-content-between gap-2 w-100">
-          <img
-            className="se__logo"
-            src={GovDubai}
-            alt="Government of Dubai"
-            style={{ height: "50px", width: "auto" }}
-          />
-           <img
-            className="se__logo"
-            src={secondLogo}
-            alt="Government of Dubai"
-            style={{ height: "50px", width: "auto" }}
-          />
-        </div>
-      </div>
-
-      {/* Centered Titles */}
-      <div className="text-center mt-2">
-          <img src={dubaiNowTitle} alt="UAE Pass Title" className="w-100 mb-3" />
         
-        {/* <span className="se__brand-ar fw-medium d-block fs-4  font-dda_ar">
-         {pageTitle_ar}
-        </span>
-        <span className="se__brand-en fw-bold d-block pb-2 fs-5 text-uppercase mt-1" >
-     {pageTitle_en}
-        </span> */}
+      {/* </div> */}
+
+      {/* <div className="text-center mt-2"> */}
+          <img src={header} alt="UAE Pass Title" className="w-100 mb-3" />
+
       </div>
     </header>
       {/* Roles header pills */}
@@ -143,7 +126,7 @@ const cta_ar = "جرب الآن";
            </div>
            {/* CTA */}
             <div className="se__cta  position-absolute  cursor-pointer start-50 translate-middle-x d-flex flex-column justify-content-center align-items-center g-4" onClick={() => window.open(RedirectBase.DubaiNow.link, "_blank")} style={{bottom:'0px'}}>
-                 <img className="dn__qr" src={transportQr} alt="QR" />
+                 <img className="dn__qr" src={qrCode} alt="QR" />
           
             </div>
         </div>

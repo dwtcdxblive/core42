@@ -7,7 +7,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import infrostructure from "../../../assets/bgDDA/infrostructure.svg";
+import infrostructure from "../../../assets/bgDDA/infrostructure.png";
 import { RedirectBase } from "../RedirectBase";
 const InfrostructureBg = () => {
 
