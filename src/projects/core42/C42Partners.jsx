@@ -12,6 +12,7 @@ import PartnerNvidia from "../../assets/nvidia.svg"
 import PartnerSoftServe from "../../assets/softserve.svg"
 import PartnerInveniam from "../../assets/Inveniam.svg"
 import PartnerAirev from "../../assets/Airev.svg"
+import PartnerSolutionPlus from '../../assets/Solutions-.png';
 
 const partnerTiles = [
   // { title: "World Wide Technology", logo: PartnerWWT },
@@ -21,6 +22,7 @@ const partnerTiles = [
   { title: "softserve", logo: PartnerSoftServe },
   { title: "Inveniam", logo: PartnerInveniam },
   { title: "Airev", logo: PartnerAirev },
+  { title: "Solution Plus", logo: PartnerSolutionPlus },
 ]
 
 const primaryActions = [
