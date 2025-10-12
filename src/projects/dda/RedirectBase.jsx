@@ -6,7 +6,7 @@ export const RedirectBase = {
   SmartSupplier: { link: "SmartSupplier://" },
   SourcingAgent: { link: "SmartSupplier://" },
   Portal: { link: "waiting for link" },
-  ProductCopilot: { link: "waiting for link" },
+  ProductCopilot: { link: "https://dda-3.qa.digitaldubai.ae/" },
   DubaiGovernmentAI: { link: "waiting for presentation" },
   Infostructure: { link: "waiting for link" },
 
@@ -16,7 +16,7 @@ export const RedirectBase = {
 
   // --- Shared Tunnel (Right Side) ---
   DubaiTransport: { link: "https://prod.shail.ae/wv/linking/" },
-  Aicomitee: { link: "waiting for video from Dubai Justice" },
+  Aicomitee: { link: "https://dda-ai-committee.qa.digitaldubai.ae/" },
 
   // --- Dubai Entities ---
   InvestInDubai: { link: "https://www.investindubai.gov.ae/" },
@@ -30,5 +30,7 @@ export const RedirectBase = {
   DubaiPopulationNow: { link: "https://da.dubai.gov.ae/sam/extensions/hh/home.html" },
   DataAndStatistics: { link: "https://dda-gitex.azurewebsites.net/" },
   DataMarketplace: { link: "https://portalstg.data.dubai/web/marketplace-portal" },
+
+ 
 };
 

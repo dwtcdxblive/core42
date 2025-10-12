@@ -34,8 +34,11 @@ export default function DubaiNowDetail() {
           {item.img? <img src={item.img} width='240px'/>:
           
             <button type="button" className="se__btn  ">
-            <span className="se__btn-ar font-dda_ar ">جرّب الآن</span>
-            <span className="se__btn-en ">VOLUNTEER</span>
+            <span className="se__btn-ar font-dda_ar ">
+           {item.ar}
+
+            </span>
+            <span className="se__btn-en ">{item.en}</span>
           </button>
           }
         
