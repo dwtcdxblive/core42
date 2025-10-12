@@ -1,5 +1,5 @@
 import { memo } from "react";
-
+import { RedirectBase } from "./RedirectBase";
 const cards = [
   {
     key: "recruitment",
@@ -128,7 +128,7 @@ const AgentsSuite = memo(function AgentsSuite() {
                     </ul>
                     </div>
                     {/* CTA */}
-                  <div className="ags__cta  position-absolute  start-50 translate-middle-x" style={{bottom:'10px'}}>
+                  <div onClick={() => window.open(RedirectBase.AgentsSuite.link, "_blank")}className="ags__cta  position-absolute  start-50 translate-middle-x" style={{bottom:'10px'}}>
                     <button type="button" className="ags__btn ">
                       <span className="ags__btn-ar font-dda_ar ">جرّب الآن</span>
                       <span className="ags__btn-en ">EXPLORE</span>

@@ -1,6 +1,6 @@
 import Logo from "../../assets/smartemployee.png"; // adjust path if needed
 import { memo } from "react";
-
+import { RedirectBase } from "./RedirectBase";
 
 const SmartEmplyee = memo(function SmartEmplyee() {
 
@@ -80,7 +80,7 @@ const sectionTitleAr= "المهام";
            </div>
            {/* CTA */}
         <div className="se__cta  position-absolute  start-50 translate-middle-x" style={{bottom:'10px'}}>
-          <button type="button" className="se__btn ">
+          <button type="button" className="se__btn " onClick={() => window.open(RedirectBase.SmartEmployee.link, "_blank")}>
             <span className="se__btn-ar font-dda_ar ">جرّب الآن</span>
             <span className="se__btn-en ">EXPLORE</span>
           </button>

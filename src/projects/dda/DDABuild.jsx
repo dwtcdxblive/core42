@@ -2,7 +2,7 @@ import GovDubai from "../../assets/dubai-gov.png";
 import TradeQR from "../../assets/build-dubai-QR.png";
 import LogosStrip from "../../assets/build-dubai-logos.png";
 import Explore from "../../assets/explore-btn.png";
-
+import { RedirectBase } from "./RedirectBase";
 export default function BuildInDubai() {
   return (
     <section className="trade">
@@ -35,10 +35,10 @@ export default function BuildInDubai() {
           </article>
 
           {/* QR + CTA (image button) */}
-          <div className="trade__qr">
+          <div className="trade__qr" onClick={() => window.open(RedirectBase.DubaiBuild.link, "_blank")}>
             <img src={TradeQR} className="trade__qr-img" alt="QR code" />
             <a  
-            href="https://www.buildindubai.gov.ae/"
+            href={RedirectBase.DubaiBuild.link}
             type="button" className="bg-transparent border-0 p-0  text-center text-decoration-none">
               <img src={Explore} className="w-50" alt="Explore" />
             </a>

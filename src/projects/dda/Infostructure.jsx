@@ -33,7 +33,7 @@ const activitiesAr = [
   { strong: "الذكاء الاصطناعي منخفض البرمجة" },
 ];
 
-const Recruitment = memo(function Recruitment() {
+const Infostructure = memo(function Infostructure() {
   return (
 
 
@@ -127,7 +127,8 @@ const Recruitment = memo(function Recruitment() {
   </div>
         {/* CTA */}
                   <div className="ags__cta py-3 h-unset d-flex justify-content-center align-item-center" >
-                    <button type="button" className="ags__btn "  style={{height:'auto' ,width:'360px'}}>
+                    {/* onClick={() => window.open(RedirectBase.ProductCopilot.link, "_blank")} */}
+                    <button type="button" className="ags__btn "  style={{height:'auto' ,width:'360px'}} >
                       <span className="ags__btn-ar font-dda_ar fs-1 ">جرّب الآن</span>
                       <span className="ags__btn-en fs-1  ">EXPLORE</span>
                     </button>
@@ -136,4 +137,4 @@ const Recruitment = memo(function Recruitment() {
   );
 });
 
-export default Recruitment;
+export default Infostructure;

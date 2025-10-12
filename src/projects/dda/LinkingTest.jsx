@@ -1,20 +1,24 @@
+import { RedirectBase } from "./RedirectBase"
 const deepLinks = [
   {
     name: "SmartSupplier",
     description: "Launch the SmartSupplier mobile experience.",
-    url: "SmartSupplier://",
+
+    url:RedirectBase.SmartSupplier.link,
     iosOnly: true,
   },
   {
     name: "Dubai Now (QA)",
     description: "Open the Dubai Now QA build and land on the success screen.",
     url: "dubaiNowQA://success",
+    url:RedirectBase.DubaiNow.link,
     iosOnly: true,
   },
   {
     name: "Smart Employee (QA)",
     description: "Route into Smart Employee QA and confirm the deep link callback.",
-    url: "smartemployeeQA://success",
+    // url: "smartemployeeQA://success",
+        url:RedirectBase.SmartEmployee.link,
     iosOnly: true,
   },
 ]

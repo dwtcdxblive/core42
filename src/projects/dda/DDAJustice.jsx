@@ -3,6 +3,7 @@ import LogosStrip from "../../assets/dubai-justice-logos.png";
 import Explore from '../../assets/explore-btn.png';
 import EnTypo from '../../assets/justice-typo-en.png'
 import ArTypo from '../../assets/justice-typo-ar.png'
+import { RedirectBase } from "./RedirectBase";
 export default function JusticeInDubai() {
   return (
     <section className="trade trade--justice">
@@ -33,9 +34,9 @@ export default function JusticeInDubai() {
               <li className="font-title">General Judicial Services and complaints</li>
             </ul>
           </article>
-        <div className="trade__cta">
+        <div className="trade__cta" onClick={() => window.open(RedirectBase.ProductCopilot.link, "_blank")}>
             <a  
-            href="https://www.buildindubai.gov.ae/"
+            href={RedirectBase.ProductCopilot.link}
             type="button" className="bg-transparent border-0 p-0 text-center text-decoration-none">
               <img src={Explore} className="w-50" alt="Explore" />
             </a>

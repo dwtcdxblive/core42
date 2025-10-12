@@ -9,7 +9,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import qrInvest from "../../assets/qrInvest.png";
 import justiceSponsers from "../../assets/justiceSponsers.svg";
 import GovDubai from "../../assets/dubai-gov.png";
-
+import { RedirectBase } from "./RedirectBase";
 const JusticeDubai = () => {
 
 
@@ -57,7 +57,7 @@ const activitiesAr = [
         </div>
 
         {/* Main Row */}
-        <div className="row align-items-start bg-gray rounded-1  justify-content-center gy-4 mt-5">
+        <div className="row align-items-start bg-white    rounded-1  justify-content-center gy-4 mt-5">
           {/* Left English Block */}
           <div className="col-12 col-md-5">
             <div className="blue-font-bg text-white rounded-3 p-2 mb-3 fw-bold font-GothamMedium fs-5" style={{height:'7vh'}}>
@@ -80,7 +80,7 @@ const activitiesAr = [
               style={{ maxWidth: "150px" }}
             /> */}
       
-           <div className="dark-blue-bg text-white rounded-3 fw-semibold py-2 px-4 mx-auto fs-3">
+           <div className="dark-blue-bg text-white rounded-3 fw-semibold py-2 px-4 mx-auto fs-3" onClick={() => window.open(RedirectBase.JusticeDubai.link, "_blank")}>
               <div className="text-uppercase font-GE_SSBold " >جرب الآن</div>
               <div className="text-uppercase font-GothamMedium">Explore</div>
             </div> 
