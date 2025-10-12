@@ -9,7 +9,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import qrInvest from "../../assets/qrInvest.png";
 import tourismSponsers from "../../assets/tourismSponsers.svg";
 import GovDubai from "../../assets/dubai-gov.png";
-
+import { RedirectBase } from "./RedirectBase"
 const TourismDubai = () => {
 
 const activitiesEn = [
@@ -85,9 +85,9 @@ const pageTitle_ar = "المنصة الرسمية للسياحة في دبي";
               style={{ maxWidth: "150px" }}
             />
       
-           <div className="dark-blue-bg text-white rounded-3 fw-semibold py-2 px-4 mx-auto fs-3">
+           <div className="dark-blue-bg text-white rounded-3 fw-semibold py-2 px-4 mx-auto fs-3"  onClick={() => window.open(RedirectBase.VisitDubai.link, "_blank")} >
               <div className="text-uppercase font-GE_SSBold " >جرب الآن</div>
-              <div className="text-uppercase font-GothamMedium">Explore</div>
+              <div className="text-uppercase font-GothamMedium" >Explore</div>
             </div> 
           </div>
 

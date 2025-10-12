@@ -9,7 +9,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import qrInvest from "../../assets/qrInvest.png";
 import justiceSponsers from "../../assets/justiceSponsers.svg";
 import GovDubai from "../../assets/dubai-gov.png";
-
+import { RedirectBase } from "./RedirectBase";
 const JusticeDubai = () => {
 
 
@@ -80,7 +80,7 @@ const activitiesAr = [
               style={{ maxWidth: "150px" }}
             /> */}
       
-           <div className="dark-blue-bg text-white rounded-3 fw-semibold py-2 px-4 mx-auto fs-3">
+           <div className="dark-blue-bg text-white rounded-3 fw-semibold py-2 px-4 mx-auto fs-3" onClick={() => window.open(RedirectBase.JusticeDubai.link, "_blank")}>
               <div className="text-uppercase font-GE_SSBold " >جرب الآن</div>
               <div className="text-uppercase font-GothamMedium">Explore</div>
             </div> 

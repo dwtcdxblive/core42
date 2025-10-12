@@ -4,6 +4,7 @@ import GovDubai from "../../assets/dubai-gov.png";
 import rtaLogo from "../../assets/rtaLogo.svg";
 import transportQr from "../../assets/transportQr.png";
 import { dubaiNowItems } from "./DubaiNowData";
+import { RedirectBase } from "./RedirectBase";
 
 const DubaiTransport = memo(function DubaiTransport() {
   // split EN/AR columns evenly
@@ -86,7 +87,7 @@ const activitiesAr = [
           </ul>
            </div>
            {/* CTA */}
-            <div className="se__cta  position-absolute   start-50 translate-middle-x d-flex flex-column justify-content-center align-items-center g-4" style={{bottom:'0px'}}>
+            <div onClick={() => window.open(RedirectBase.DubaiTransport.link, "_blank")} className="se__cta  position-absolute   start-50 translate-middle-x d-flex flex-column justify-content-center align-items-center g-4" style={{bottom:'0px'}}>
                  <img className="dn__qr" src={transportQr} alt="QR" />
             
             </div>

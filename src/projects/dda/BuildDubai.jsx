@@ -9,7 +9,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import qrBuildDubai from "../../assets/qrBuildDubai.png";
 import buildDubaiSponsers from "../../assets/buildDubaiSponsers.svg";
 import GovDubai from "../../assets/dubai-gov.png";
-
+import { RedirectBase } from "./RedirectBase";
 const BuildDubai = () => {
 const pageTitle_en = "THE SPECIALIZED DIGITAL PLATFORM FOR BUILD IN DUBAI";
 const pageTitle_ar = "المنصة الرقمية المتخصصة في البناء في دبي";
@@ -81,7 +81,7 @@ const activitiesAr = [
               style={{ maxWidth: "150px" }}
             />
       
-           <div className="dark-blue-bg text-white rounded-3 fw-semibold py-2 px-4 mx-auto fs-3">
+           <div onClick={() => window.open(RedirectBase.DubaiBuild.link, "_blank")} className="dark-blue-bg text-white rounded-3 fw-semibold py-2 px-4 mx-auto fs-3">
               <div className="text-uppercase font-GE_SSBold " >جرب الآن</div>
               <div className="text-uppercase font-GothamMedium">Explore</div>
             </div> 

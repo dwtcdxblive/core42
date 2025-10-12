@@ -6,7 +6,7 @@ import TradeQR from "../../assets/trade-QR.png";
 import { dubaiNowItems } from "./DubaiNowData";
 import rtaLogo from "../../assets/rtaLogo.svg";
 import transportQr from "../../assets/transportQr.png";
-
+import { RedirectBase } from "./RedirectBase";
 
 const DubaiNow = memo(function DubaiNow() {
   // split EN/AR columns evenly
@@ -131,7 +131,7 @@ const cta_ar = "جرب الآن";
           </ul>
            </div>
            {/* CTA */}
-            <div className="se__cta  position-absolute   start-50 translate-middle-x d-flex flex-column justify-content-center align-items-center g-4" style={{bottom:'0px'}}>
+            <div className="se__cta  position-absolute   start-50 translate-middle-x d-flex flex-column justify-content-center align-items-center g-4" onClick={() => window.open(RedirectBase.DubaiNow.link, "_blank")} style={{bottom:'0px'}}>
                  <img className="dn__qr" src={transportQr} alt="QR" />
           
             </div>
