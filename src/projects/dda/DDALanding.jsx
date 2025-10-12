@@ -59,7 +59,32 @@ const DDALanding = () => {
           <a className="dda-secondary-btn" href="https://prod.shail.ae/wv/linking/" target="_blank" rel="noreferrer">
             View Production Reference
           </a>
+          <div>
           <h1>DDA pages</h1>
+           <h1>Dubai</h1>
+</div>
+
+
+          <Link className="dda-secondary-btn" to="TourismDubaiBG">
+            View  TourismDubai
+          </Link>
+
+ <Link className="dda-secondary-btn" to="BuildtBg">
+            View  Buildt
+          </Link>
+ <Link className="dda-secondary-btn" to="TradeDubaiBg">
+            View  TradeDubai
+          </Link>
+
+   <Link className="dda-secondary-btn" to="JusticeDubaiBg">
+            View  JusticeDubai
+          </Link>
+    <Link className="dda-secondary-btn" to="InvestBg">
+            View  Invest
+          </Link>
+<div>
+<h1>others</h1></div>
+
           <Link className="dda-secondary-btn" to="dubai-now">
             View Dubai Now
           </Link>
@@ -87,23 +112,6 @@ const DDALanding = () => {
           </Link>
       
 
-          <Link className="dda-secondary-btn" to="TourismDubaiBG">
-            View  TourismDubaiBG
-          </Link>
-
- <Link className="dda-secondary-btn" to="BuildtBg">
-            View  BuildtBg
-          </Link>
- <Link className="dda-secondary-btn" to="TradeDubaiBg">
-            View  TradeDubaiBg
-          </Link>
-
-   <Link className="dda-secondary-btn" to="JusticeDubaiBg">
-            View  JusticeDubaiBg
-          </Link>
-    <Link className="dda-secondary-btn" to="InvestBg">
-            View  InvestBg
-          </Link>
 
 
 

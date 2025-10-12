@@ -6,7 +6,7 @@ export default function VideoBackground({ children,isVideo=true,bgFullLink }) {
   return (
     <>
 
-       <div className="video-bg dda-hero" aria-hidden="true" style={{backgroundColor: 'grey'}}>
+       <div className="video-bg dda-hero" aria-hidden="true">
      {/* <div className="video-bg__media" style={{backgroundImage: `url(${bgFullLink})`,backgroundSize: 'cover'}}></div> */}
            <div className='dda-hero-bg' aria-hidden='true'>
        <iframe

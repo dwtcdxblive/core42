@@ -7,7 +7,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import invest from "../../../assets/bgDDA/invest.svg";
+import invest from "../../../assets/bgDDA/invest.png";
 import { RedirectBase } from "../RedirectBase";
 const InvestBg = () => {
 

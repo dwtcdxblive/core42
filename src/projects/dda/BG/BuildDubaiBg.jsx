@@ -7,7 +7,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import build from "../../../assets/bgDDA/Build.svg";
+import build from "../../../assets/bgDDA/Build.png";
 import { RedirectBase } from "../RedirectBase";
 const BuildDubaiBg = () => {
 

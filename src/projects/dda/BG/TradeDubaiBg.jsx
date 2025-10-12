@@ -7,7 +7,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import trade from "../../../assets/bgDDA/Trade.svg";
+import trade from "../../../assets/bgDDA/trade.png";
 import { RedirectBase } from "../RedirectBase";
 const TradeDubaiBg = () => {
 

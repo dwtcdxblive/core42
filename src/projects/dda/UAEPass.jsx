@@ -7,7 +7,7 @@ import card_2 from "../../assets/uaepass/card_2.png";
 import card_3 from "../../assets/uaepass/card_3.png";
 import card_4 from "../../assets/uaepass/card_4.png";
 import titleUaePass from "../../assets/uaepass/titleUaePass.png";
-import uaepasssponsers from "../../assets/uaepass/uaepasssponsers.svg";
+import uaepasssponsers from "../../assets/uaepass/uaepasssponsers.png";
 import exploreuaepass from "../../assets/uaepass/exploreuaepass.png";
 import uaeQode from "../../assets/uaepass/uaeQode.svg";
 

@@ -7,7 +7,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import CoPilot from "../../../assets/bgDDA/CoPilot.svg";
+import CoPilot from "../../../assets/bgDDA/CoPilot.png";
 import { RedirectBase } from "../RedirectBase";
 const CoPilotBg = () => {
 
