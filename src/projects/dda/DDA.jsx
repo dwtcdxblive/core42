@@ -37,6 +37,11 @@ import InvestBg from "./BG/InvestBg.jsx"
 import DubaiTransportBg from "./BG/DubaiTransportBg.jsx"
 import DubaiSmartSuplier from "./BG/DubaiSmartSuplier.jsx"
 import DubaiSmartEmployee from "./BG/DubaiSmartEmployee.jsx"
+import DubaiMarketPage from "./BG/DubaiMarketPage.jsx"
+import DubaiPopulationPage from "./BG/DubaiPopulationPage.jsx"
+import DataCountPage from "./BG/DataCountPage.jsx"
+import AISamplingPage from "./BG/AISamplingPage.jsx"
+import CODAIPage from "./BG/CODAIPage.jsx"
 const DDA = () => {
   return (
 <div className="position-relative min-vh-100">
@@ -90,7 +95,15 @@ const DDA = () => {
 
 
 
+    
       
+      <Route path="DubaiMarketPage" element={<DubaiMarketPage />} />
+      <Route path="DubaiPopulationPage" element={<DubaiPopulationPage />} />
+      <Route path="DataCountPage" element={<DataCountPage />} />
+      <Route path="AISamplingPage" element={<AISamplingPage />} />
+      <Route path="CODAIPage" element={<CODAIPage />} />
+
+
     </Routes>
   </div>
 </div>

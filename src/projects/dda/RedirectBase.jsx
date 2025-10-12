@@ -1,5 +1,4 @@
 
-
 export const RedirectBase = {
   // --- DDGE / Tunnel Left Side ---
   DubaiAI: { link: "dubaiNowQA://success" },
@@ -10,22 +9,26 @@ export const RedirectBase = {
   ProductCopilot: { link: "waiting for link" },
   DubaiGovernmentAI: { link: "waiting for presentation" },
   Infostructure: { link: "waiting for link" },
+
   // --- Shared Tunnel (Left Side) ---
   UAEPASS: { link: "uaepassstg://" },
   DubaiNow: { link: "dubaiNowQA://success" },
 
-
   // --- Shared Tunnel (Right Side) ---
-
   DubaiTransport: { link: "https://prod.shail.ae/wv/linking/" },
-
   Aicomitee: { link: "waiting for video from Dubai Justice" },
 
-  // dubai
+  // --- Dubai Entities ---
   InvestInDubai: { link: "https://www.investindubai.gov.ae/" },
   VisitDubai: { link: "https://www.visitdubai.com/en" },
-    DubaiBuild: { link: "buildindubai.gov.ae/" },
+  DubaiBuild: { link: "https://buildindubai.gov.ae/" },
   DubaiJustice: { link: "waiting for video from Dubai Justice" },
-    DubaiTrade: { link: "SW_Journey_gitex - Page 1" },
+  DubaiTrade: { link: "SW_Journey_gitex - Page 1" },
+
+  // --- DDA Projects ---
+  CODAI: { link: "PowerPoint" },
+  DubaiPopulationNow: { link: "https://da.dubai.gov.ae/sam/extensions/hh/home.html" },
+  DataAndStatistics: { link: "https://dda-gitex.azurewebsites.net/" },
+  DataMarketplace: { link: "https://portalstg.data.dubai/web/marketplace-portal" },
 };
 
