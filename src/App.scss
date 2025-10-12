@@ -4121,9 +4121,9 @@ text-align: center;
 .dda-hero {
   position: relative;
   overflow: hidden;
-  background-color: #0b1a50;
+  background-color: #f3f3f3;
 }
-
+ 
 .dda-hero::before {
   content: "";
   position: absolute;
@@ -4180,8 +4180,8 @@ text-align: center;
 }
 
 .dda-hero-btn:hover {
-  background-color: #0b1a50;
-  border-color: #0b1a50;
+background-color: #f3f3f3;
+  border-color: #f3f3f3;
 }
 
 .dda-hero-btn:focus-visible {

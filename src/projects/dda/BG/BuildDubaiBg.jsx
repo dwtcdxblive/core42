@@ -7,7 +7,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import Build from "../../../assets/bgDDA/Build.svg";
+import build from "../../../assets/bgDDA/Build.svg";
 
 const BuildDubaiBg = () => {
 
@@ -16,7 +16,7 @@ const BuildDubaiBg = () => {
 
         <main className="min-vh-100 d-flex align-items-center  ">
           <img className="container"     width='100%'
-        height='100%' src={Build}/>
+        height='100%' src={build}/>
           
         
         </main>
